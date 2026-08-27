@@ -18,10 +18,10 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
 
   return (
     <div>
-      {/* Minimalist Hero Banner */}
+      {/* 1. First Header Box: Minimalist Hero Banner */}
       <div className="card-neo" style={{ 
         backgroundColor: '#FFFFFF', 
-        marginBottom: '32px', 
+        marginBottom: '24px', 
         padding: '36px',
         borderLeft: '6px solid var(--accent-green)'
       }}>
@@ -42,7 +42,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
           <button 
             className="btn-neo btn-neo-outline" 
             onClick={() => setShowAboutNiftech(!showAboutNiftech)}
-            style={{ marginBottom: '22px', fontSize: '0.85rem' }}
+            style={{ marginBottom: showAboutNiftech ? '22px' : 0, fontSize: '0.85rem' }}
           >
             {showAboutNiftech ? '▲ Hide About NIFTECH Story' : '📖 Read the NIFTECH Story by Chigbo →'}
           </button>
@@ -54,7 +54,6 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
               padding: '24px', 
               borderRadius: '16px', 
               border: 'var(--border-subtle)', 
-              marginBottom: '24px',
               lineHeight: 1.65,
               fontSize: '0.94rem'
             }}>
@@ -74,17 +73,50 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
               </div>
             </div>
           )}
+        </div>
+      </div>
 
-          {/* Search & Category Filter Pills */}
-          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <input 
-              type="text" 
-              placeholder={`Search across all ${gadgets?.length || 48} gadgets by name or brand...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="input-neo"
-              style={{ maxWidth: '380px', margin: 0 }}
-            />
+      {/* 2. Standalone Separate Search & Filter Box */}
+      <div className="card-neo" style={{ 
+        backgroundColor: '#FFFFFF', 
+        marginBottom: '32px', 
+        padding: '24px 32px',
+        borderLeft: '6px solid var(--accent-purple)'
+      }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.4rem' }}>🔍</span>
+              <div>
+                <h3 style={{ fontSize: '1.15rem', color: '#1A1A1A', fontFamily: 'var(--font-heading)' }}>
+                  Search & Filter Gadget Reviews
+                </h3>
+                <p style={{ fontSize: '0.82rem', color: '#666' }}>
+                  Filter by gadget category or type any product name / brand below.
+                </p>
+              </div>
+            </div>
+
+            <span className="badge-neo badge-neo-lime">
+              SHOWING {filteredGadgets.length} OF {gadgets?.length || 48} GADGETS
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+            {/* Search Input Box */}
+            <div style={{ flex: '1 1 300px' }}>
+              <input 
+                type="text" 
+                placeholder={`🔍 Type gadget name, brand (e.g. Tecno, Oraimo, Starlink)...`}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="input-neo"
+                style={{ width: '100%', margin: 0, padding: '12px 18px', fontSize: '0.92rem' }}
+              />
+            </div>
+
+            {/* Category Filter Pills */}
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {categories.map(cat => (
                 <button 
@@ -94,11 +126,11 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                     padding: '8px 16px',
                     borderRadius: 'var(--radius-pill)',
                     border: categoryFilter === cat ? 'none' : 'var(--border-subtle)',
-                    fontWeight: '700',
-                    fontSize: '0.85rem',
+                    fontWeight: '800',
+                    fontSize: '0.82rem',
                     cursor: 'pointer',
                     color: categoryFilter === cat ? '#FFF' : '#1A1A1A',
-                    backgroundColor: categoryFilter === cat ? '#1A1A1A' : 'var(--bg-card-alt)',
+                    backgroundColor: categoryFilter === cat ? 'var(--accent-purple)' : 'var(--bg-card-alt)',
                     transition: 'all 0.15s ease'
                   }}
                 >
@@ -107,91 +139,96 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
               ))}
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* Section Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '22px', flexWrap: 'wrap', gap: '12px' }}>
-        <h2 style={{ fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span>Reviewed Products ({filteredGadgets.length})</span>
-          <span className="badge-neo badge-neo-lime">ALL {gadgets?.length || 48} PRODUCTS LOADED</span>
-        </h2>
-        <span style={{ fontSize: '0.85rem', fontWeight: '600', color: '#666' }}>
-          Click card to view Product Master Page
-        </span>
+      {/* 3. Official YouTube Videos Gallery */}
+      <YouTubeVideoGallery onSelectVideo={onSelectVideo} />
+
+      {/* 4. Product Cards Grid Section Header */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+        <div>
+          <h2 style={{ fontSize: '1.6rem', color: '#1A1A1A' }}>
+            📱 All Vetted Gadgets ({filteredGadgets.length})
+          </h2>
+          <p style={{ fontSize: '0.88rem', color: '#666666' }}>
+            Click any gadget card below to open its GSMArena spec sheet, 10-point rating matrix, and verified vendor deals.
+          </p>
+        </div>
       </div>
 
-      {/* Editorial Product Cards */}
-      <div className="grid-gadgets">
+      {/* Product Cards Grid */}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
+        gap: '24px' 
+      }}>
         {filteredGadgets.map(gadget => (
-          <div key={gadget.id} className="card-neo" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div 
+            key={gadget.id} 
+            className="card-neo" 
+            style={{ 
+              backgroundColor: '#FFFFFF', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              justifyContent: 'space-between',
+              cursor: 'pointer'
+            }}
+            onClick={() => openGadgetDetail(gadget.id)}
+          >
             <div>
-              {/* Image Container */}
-              <div 
-                onClick={() => openGadgetDetail(gadget.id)}
-                style={{ 
-                  height: '210px', 
-                  borderRadius: '14px', 
-                  border: 'var(--border-subtle)', 
-                  overflow: 'hidden', 
-                  position: 'relative', 
-                  cursor: 'pointer',
-                  marginBottom: '16px',
-                  backgroundColor: '#FAF7F2'
-                }}
-              >
+              {/* Product Thumbnail */}
+              <div style={{ 
+                borderRadius: '12px', 
+                border: 'var(--border-subtle)', 
+                overflow: 'hidden', 
+                height: '180px', 
+                marginBottom: '14px',
+                backgroundColor: '#FAF7F2',
+                position: 'relative'
+              }}>
                 <img 
                   src={gadget.thumbnail} 
                   alt={gadget.name} 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  onError={(e) => {
+                    e.target.src = 'https://img.youtube.com/vi/vUOcha0xIpA/hqdefault.jpg';
+                  }}
                 />
-                <div style={{ position: 'absolute', top: '10px', left: '10px' }}>
-                  <span className="badge-neo badge-neo-purple">{gadget.category}</span>
-                </div>
-                <div style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
-                  <span className="badge-neo badge-neo-yellow" style={{ fontSize: '0.88rem', padding: '5px 12px' }}>
-                    ⭐ {gadget.score} / 10
-                  </span>
-                </div>
+                <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '0.75rem' }}>
+                  ⭐ {gadget.score} / 10
+                </span>
               </div>
 
-              {/* Title & Layman Verdict */}
-              <h3 onClick={() => openGadgetDetail(gadget.id)} style={{ cursor: 'pointer', fontSize: '1.2rem', marginBottom: '8px', color: '#1A1A1A', lineHeight: 1.3 }}>
+              {/* Category & Brand Badge */}
+              <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
+                <span className="badge-neo badge-neo-purple" style={{ fontSize: '0.7rem' }}>{gadget.category}</span>
+                <span className="badge-neo badge-neo-yellow" style={{ fontSize: '0.7rem' }}>{gadget.brand}</span>
+              </div>
+
+              {/* Title & Verdict */}
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: '#1A1A1A', lineHeight: 1.3 }}>
                 {gadget.name}
               </h3>
-              <p style={{ 
-                fontSize: '0.88rem', 
-                color: '#444444', 
-                marginBottom: '16px', 
-                fontStyle: 'italic', 
-                background: 'var(--bg-card-alt)', 
-                padding: '12px', 
-                borderLeft: '4px solid var(--accent-purple)', 
-                borderRadius: '8px',
-                lineHeight: 1.5
-              }}>
+              <p style={{ fontSize: '0.84rem', color: '#555555', lineHeight: 1.4, marginBottom: '14px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 "{gadget.verdict}"
               </p>
             </div>
 
-            {/* Footer action */}
-            <div style={{ borderTop: 'var(--border-subtle)', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '0.82rem', fontWeight: '600', color: '#666' }}>
-                🏢 {gadget.trustedVendors.length} Verified Vendors
-              </span>
-              <button className="btn-neo btn-neo-lime" style={{ padding: '7px 16px', fontSize: '0.85rem' }} onClick={() => openGadgetDetail(gadget.id)}>
-                Master Page →
-              </button>
+            <div>
+              <div style={{ borderTop: 'var(--border-subtle)', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '0.78rem', color: 'var(--accent-green)', fontWeight: '700' }}>
+                  🛒 Verified Stores Available
+                </span>
+                <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.75rem' }}>
+                  Read Review →
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Official YouTube Video Library Grid */}
-      <YouTubeVideoGallery onSelectVideo={(v) => {
-        if (onSelectVideo) onSelectVideo(v);
-        else window.open(v.videoUrl, '_blank');
-      }} />
 
     </div>
   );
