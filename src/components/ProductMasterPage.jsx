@@ -14,6 +14,36 @@ export default function ProductMasterPage({
 }) {
   const [showScoreMatrix, setShowScoreMatrix] = useState(true);
 
+  // Key Features extracted dynamically
+  const keyFeatures = [
+    `⚡ ${gadget.quickFacts?.endurance || 'High-capacity battery with fast generator charging support'}`,
+    `☀️ ${gadget.quickFacts?.visibility || 'Outdoor readable display under direct sunlight'}`,
+    `🔊 ${gadget.quickFacts?.audio || 'High-clarity audio tuned for noisy environments'}`,
+    `🛡️ ${gadget.quickFacts?.toughness || 'Drop tested durable chassis built for daily carry'}`,
+    `🛒 Verified Southeast vendor stock with local warranty and promo codes`
+  ];
+
+  // Local Gadget Banter & Jokes
+  const gadgetJokes = [
+    `⚡ "If NEPA brings light for just 5 minutes while you're charging this, you can watch 3 full seasons of movies before the transformer remembers to trip off again!"`,
+    `🔊 "The Noise Cancellation is so strong that when your mom calls your name from the kitchen, you can genuinely claim you were listening to high-fidelity audio in good conscience."`,
+    `🛡️ "Drop test result: It fell out of a moving Keke in Onitsha, bounced off the gutter onto concrete, and the gutter was the one that sustained structural damage."`,
+    `🔋 "This battery lasts so long that your neighbours will start suspecting you own a secret solar farm in your room."`
+  ];
+
+  const matrixMetrics = [
+    { num: "01", label: "Logistics & Delivery", desc: "Shipping times, waybill costs to Southeast, vendor reliability", score: gadget.matrixScores?.logistics || 9.0 },
+    { num: "02", label: "Setup & Friction", desc: "Out-of-the-box experience, manual steps, companion app reliability", score: gadget.matrixScores?.setup || 8.8 },
+    { num: "03", label: "Build & Toughness", desc: "Premium feel vs cheap plastic, drop survival on concrete", score: gadget.matrixScores?.build || 9.2 },
+    { num: "04", label: "Ergonomics & Comfort", desc: "Daily carry weight, earpiece fatigue, physical comfort", score: gadget.matrixScores?.ergonomics || 8.7 },
+    { num: "05", label: "Core Performance", desc: "Actual ANC quality, advertised speed, real-world utility", score: gadget.matrixScores?.performance || 9.4 },
+    { num: "06", label: "Battery & Endurance", desc: "Off-the-grid survival, generator fast-charging performance", score: gadget.matrixScores?.battery || 9.5 },
+    { num: "07", label: "Software & Connectivity", desc: "App quality, Bluetooth drop-offs, OS update frequency", score: gadget.matrixScores?.software || 8.9 },
+    { num: "08", label: "Local Climate Resilience", desc: "Sun heat resistance, overheating threshold, network stability", score: gadget.matrixScores?.climate || 9.1 },
+    { num: "09", label: "Customer Care & Support", desc: "Local repair centers in Southeast, warranty response rates", score: gadget.matrixScores?.support || 8.6 },
+    { num: "10", label: "Value for Naira", desc: "Price-to-performance ratio and overall bang-for-buck", score: gadget.matrixScores?.value || 9.3 }
+  ];
+
   return (
     <div>
       {/* Back Navigation & YouTube Channel Link */}
@@ -35,7 +65,7 @@ export default function ProductMasterPage({
 
       {/* Hero Card */}
       <div className="card-neo" style={{ backgroundColor: '#FFFFFF', marginBottom: '32px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', alignItems: 'flex-start' }}>
           
           {/* Media & Video Link */}
           <div>
@@ -43,7 +73,7 @@ export default function ProductMasterPage({
               borderRadius: '16px', 
               border: 'var(--border-subtle)', 
               overflow: 'hidden', 
-              height: '280px', 
+              height: '300px', 
               position: 'relative', 
               marginBottom: '14px', 
               backgroundColor: '#FAF7F2'
@@ -81,7 +111,7 @@ export default function ProductMasterPage({
             </div>
           </div>
 
-          {/* Details & Verdict */}
+          {/* Details, Verdict & Key Features */}
           <div>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
               <span className="badge-neo badge-neo-purple">{gadget.category}</span>
@@ -90,7 +120,7 @@ export default function ProductMasterPage({
 
             <h1 style={{ fontSize: '2.4rem', marginBottom: '16px', color: '#1A1A1A' }}>{gadget.name}</h1>
             
-            {/* Score Badge */}
+            {/* Numeric Rating Score (No 'over 10') */}
             <div style={{ 
               display: 'inline-flex', 
               alignItems: 'center', 
@@ -101,29 +131,65 @@ export default function ProductMasterPage({
               padding: '12px 20px', 
               marginBottom: '20px' 
             }}>
-              <span style={{ fontSize: '2rem', fontWeight: '900', color: '#B45309', fontFamily: 'var(--font-mono)' }}>⭐ {gadget.score}</span>
+              <span style={{ fontSize: '2.2rem', fontWeight: '900', color: '#B45309', fontFamily: 'var(--font-mono)' }}>⭐ {gadget.score}</span>
               <div>
-                <div style={{ fontWeight: '800', fontSize: '0.9rem', color: '#1A1A1A' }}>AVERAGED 10-STAR SCORE</div>
+                <div style={{ fontWeight: '800', fontSize: '0.9rem', color: '#1A1A1A' }}>OVERALL RATING SCORE</div>
                 <div style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600' }}>Evaluated across 10 lifecycle metrics</div>
               </div>
             </div>
 
-            {/* Verdict Box */}
+            {/* Verdict Box with Key Features */}
             <div style={{ 
-              padding: '18px', 
+              padding: '20px', 
               background: 'var(--bg-card-alt)', 
-              borderLeft: '4px solid var(--accent-purple)', 
-              borderRadius: '12px' 
+              borderLeft: '5px solid var(--accent-purple)', 
+              borderRadius: '14px' 
             }}>
-              <h4 style={{ color: 'var(--accent-purple)', fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '0.05em' }}>
+              <h4 style={{ color: 'var(--accent-purple)', fontSize: '0.82rem', textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '0.05em', fontWeight: '800' }}>
                 ⚡ CHIGBO'S FINAL VERDICT
               </h4>
-              <p style={{ fontWeight: '700', fontSize: '1.08rem', color: '#1A1A1A', lineHeight: 1.5 }}>
+              <p style={{ fontWeight: '700', fontSize: '1.08rem', color: '#1A1A1A', lineHeight: 1.5, marginBottom: '16px' }}>
                 "{gadget.verdict}"
               </p>
+
+              {/* ✨ Key Features Sub-Section */}
+              <div style={{ borderTop: '1px solid #E2DDD5', paddingTop: '12px' }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: '900', color: '#1A1A1A', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span>✨ Key Standout Features & Highlights</span>
+                </div>
+                <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '0.88rem', color: '#444444', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {keyFeatures.map((feat, i) => (
+                    <li key={i} style={{ fontWeight: '600' }}>{feat}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
+
           </div>
 
+        </div>
+      </div>
+
+      {/* Local Gadget Banter & Jokes Section */}
+      <div className="card-neo" style={{ backgroundColor: '#FFFBEB', border: '1px solid #FDE68A', marginBottom: '32px', padding: '24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+          <span style={{ fontSize: '1.8rem' }}>😂</span>
+          <div>
+            <h3 style={{ fontSize: '1.25rem', color: '#B45309', fontFamily: 'var(--font-heading)' }}>
+              Chigbo's Local Gadget Banter & Tech Jokes
+            </h3>
+            <p style={{ fontSize: '0.84rem', color: '#78350F' }}>
+              Relatable real-world tech humor from everyday life in Nigeria.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px', marginTop: '16px' }}>
+          {gadgetJokes.map((joke, idx) => (
+            <div key={idx} style={{ background: '#FFFFFF', padding: '16px', borderRadius: '12px', border: '1px solid #FCD34D', fontSize: '0.9rem', color: '#1A1A1A', fontWeight: '600', lineHeight: 1.5 }}>
+              {joke}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -160,61 +226,75 @@ export default function ProductMasterPage({
       {/* ULTRA-NERDY HARDWARE SPECIFICATION TERMINAL */}
       <NerdZone specs={gadget.nerdZoneSpecs} gadget={gadget} />
 
-      {/* 10-Point Rating Matrix */}
-      <div className="card-neo" style={{ backgroundColor: '#FFFFFF', marginBottom: '32px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+      {/* 10-Point Rating Matrix (Structured Editorial Table, No '/ 10') */}
+      <div className="card-neo" style={{ backgroundColor: '#FFFFFF', marginBottom: '32px', padding: '28px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '20px' }}>
           <div>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '4px', color: '#1A1A1A' }}>📊 The 10-Point Rating Matrix</h3>
+            <h3 style={{ fontSize: '1.4rem', color: '#1A1A1A', fontFamily: 'var(--font-heading)' }}>
+              📊 The 10-Point Rating Matrix Table
+            </h3>
             <p style={{ fontSize: '0.88rem', color: '#666' }}>
-              Granular scoring evaluating the full product lifecycle: from purchase to daily coexistence in Nigeria.
+              Granular scoring table evaluating the full product lifecycle: from purchase to daily coexistence in Nigeria.
             </p>
           </div>
           <button 
             className={`btn-neo ${showScoreMatrix ? 'btn-neo-purple' : 'btn-neo-outline'}`}
             onClick={() => setShowScoreMatrix(!showScoreMatrix)}
           >
-            {showScoreMatrix ? '▲ Hide Breakdown' : '📊 See How I Scored This'}
+            {showScoreMatrix ? '▲ Hide Matrix Table' : '📊 See Rating Table'}
           </button>
         </div>
 
         {showScoreMatrix && (
-          <div style={{ marginTop: '20px', paddingTop: '18px', borderTop: 'var(--border-subtle)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
-              {[
-                { label: "1. Logistics & Delivery", desc: "Shipping times, waybill costs to Southeast, vendor reliability", score: gadget.matrixScores.logistics },
-                { label: "2. Setup & Friction", desc: "Out-of-the-box experience, manual steps, companion app bugs", score: gadget.matrixScores.setup },
-                { label: "3. Build & Toughness", desc: "Premium feel vs cheap plastic, drop survival on concrete", score: gadget.matrixScores.build },
-                { label: "4. Ergonomics & Comfort", desc: "Daily carry weight, earpiece fatigue, physical comfort", score: gadget.matrixScores.ergonomics },
-                { label: "5. Core Performance", desc: "Actual ANC quality, advertised speed, real-world utility", score: gadget.matrixScores.performance },
-                { label: "6. Battery & Endurance", desc: "Off-the-grid survival, generator fast-charging performance", score: gadget.matrixScores.battery },
-                { label: "7. Software & Connectivity", desc: "App quality, Bluetooth drop-offs, OS update frequency", score: gadget.matrixScores.software },
-                { label: "8. Local Climate Resilience", desc: "Sun heat resistance, overheating threshold, network stability", score: gadget.matrixScores.climate },
-                { label: "9. Customer Care & Support", desc: "Local repair centers in Southeast, warranty response rates", score: gadget.matrixScores.support },
-                { label: "10. Value for Naira", desc: "Price-to-performance ratio and overall bang-for-buck", score: gadget.matrixScores.value }
-              ].map((metric, idx) => (
-                <div key={idx} style={{ background: 'var(--bg-card-alt)', padding: '14px', borderRadius: '10px', border: 'var(--border-subtle)' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                    <span style={{ fontWeight: '700', fontSize: '0.88rem', color: '#1A1A1A' }}>{metric.label}</span>
-                    <span style={{ fontWeight: '900', color: 'var(--accent-purple)', fontSize: '0.95rem', fontFamily: 'var(--font-mono)' }}>{metric.score} / 10</span>
-                  </div>
-                  <p style={{ fontSize: '0.78rem', color: '#666', marginBottom: '8px' }}>{metric.desc}</p>
-                  <div className="progress-neo-track">
-                    <div 
-                      className="progress-neo-fill" 
-                      style={{ 
-                        width: `${(metric.score / 10) * 100}%`,
-                        backgroundColor: metric.score >= 9 ? 'var(--accent-green)' : metric.score >= 8 ? '#D97706' : 'var(--accent-orange)'
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div style={{ overflowX: 'auto', borderRadius: '12px', border: 'var(--border-subtle)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', textAlign: 'left' }}>
+              <thead>
+                <tr style={{ background: '#1A1A1A', color: '#FFFFFF', fontFamily: 'var(--font-heading)' }}>
+                  <th style={{ padding: '14px 16px', width: '60px' }}>#</th>
+                  <th style={{ padding: '14px 16px', width: '220px' }}>Lifecycle Metric</th>
+                  <th style={{ padding: '14px 16px' }}>Evaluation Criteria</th>
+                  <th style={{ padding: '14px 16px', width: '140px', textAlign: 'right' }}>Numeric Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                {matrixMetrics.map((m, idx) => (
+                  <tr key={idx} style={{ 
+                    borderBottom: '1px solid #E2DDD5', 
+                    backgroundColor: idx % 2 === 0 ? '#FFFFFF' : '#FAF7F2' 
+                  }}>
+                    <td style={{ padding: '14px 16px', fontWeight: '800', color: 'var(--accent-purple)', fontFamily: 'var(--font-mono)' }}>
+                      {m.num}
+                    </td>
+                    <td style={{ padding: '14px 16px', fontWeight: '800', color: '#1A1A1A' }}>
+                      {m.label}
+                    </td>
+                    <td style={{ padding: '14px 16px', color: '#555555', lineHeight: 1.4 }}>
+                      {m.desc}
+                    </td>
+                    <td style={{ padding: '14px 16px', textAlign: 'right' }}>
+                      <span style={{ 
+                        display: 'inline-block',
+                        padding: '4px 12px',
+                        borderRadius: 'var(--radius-pill)',
+                        fontWeight: '900',
+                        fontSize: '0.95rem',
+                        fontFamily: 'var(--font-mono)',
+                        backgroundColor: m.score >= 9.0 ? '#ECFDF5' : m.score >= 8.5 ? '#FEF3C7' : '#FFF1F2',
+                        color: m.score >= 9.0 ? 'var(--accent-green)' : m.score >= 8.5 ? '#B45309' : 'var(--accent-orange)',
+                        border: m.score >= 9.0 ? '1px solid #B8E4CD' : m.score >= 8.5 ? '1px solid #FDE68A' : '1px solid #FECDD3'
+                      }}>
+                        ⭐ {m.score}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
 
-      {/* Conversion Zone */}
+      {/* Verified Buying Options */}
       <div id="conversion-zone" className="card-neo" style={{ backgroundColor: '#FFFFFF', marginBottom: '32px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
           <span className="badge-neo badge-neo-lime">VERIFIED BUYING OPTIONS</span>
@@ -343,7 +423,7 @@ export default function ProductMasterPage({
               <div key={i} style={{ background: 'var(--bg-card-alt)', padding: '12px', borderRadius: '10px', border: 'var(--border-subtle)', marginBottom: '10px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <strong style={{ fontSize: '0.88rem', color: '#1A1A1A' }}>{rev.vendorName}</strong>
-                  <span style={{ fontSize: '0.85rem', fontWeight: '900', color: 'var(--accent-purple)', fontFamily: 'var(--font-mono)' }}>⭐ {rev.rating}/5</span>
+                  <span style={{ fontSize: '0.85rem', fontWeight: '900', color: 'var(--accent-purple)', fontFamily: 'var(--font-mono)' }}>⭐ {rev.rating}</span>
                 </div>
                 <p style={{ fontSize: '0.85rem', color: '#444' }}>"{rev.comment}"</p>
               </div>
