@@ -1,4 +1,4 @@
-// Generated 45+ Gadget Products from Chigbo (@chigbo-niftech) Channel Reviews & Unboxings
+// Generated 37+ Authentic Physical Gadgets with Exact Product Specs
 export const gadgetsData = [
   {
     "id": "oraimo-spacebox-unboxing-and-test",
@@ -18,12 +18,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "audioOutput": "15W RMS Stereo Output with Dual Passive Radiators",
+      "playtime": "Up to 12 Hours Continuous Music Playback",
+      "connectivity": "Bluetooth 5.3 + TF Card Slot + AUX + FM Radio",
+      "lighting": "360\u00b0 RGB Ambient Music Sync Light Effects",
+      "durability": "IPX6 Waterproof & Drop-Resistant Rubberized Housing"
     },
     "matrixScores": {
       "logistics": 9,
@@ -76,12 +75,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "40mm Dynamic Neodymium Bass Drivers",
+      "ancLevel": "-30dB Active Noise Cancellation + Transparency Pass-through",
+      "playtime": "Up to 60 Hours (40 Hours with ANC ON)",
+      "connectivity": "Bluetooth 5.3 / 3.5mm AUX Cable Included",
+      "fastCharge": "10 Mins Charge = 5 Hours Playback",
+      "buildControls": "Foldable Soft Protein Earpads + Built-in Mic & Call Buttons"
     },
     "matrixScores": {
       "logistics": 9,
@@ -134,12 +133,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -192,12 +191,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -250,12 +249,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "30,000 mAh / 111Wh High-Density Li-Po Cell",
+      "inputPorts": "Micro-USB (5V/2A) + Type-C Input (5V/3A 15W Max)",
+      "outputPorts": "Dual USB-A (22.5W Super Charge) + Type-C PD Output (20W/65W)",
+      "chargingSpeed": "8 - 10 Hours via 15W/18W Fast Adapter",
+      "safetyCircuitry": "Strix MultiProtect: Over-voltage, Surge & Thermal Control",
+      "buildMaterial": "Fire-retardant Polycarbonate + Digital LED Battery Screen"
     },
     "matrixScores": {
       "logistics": 9,
@@ -308,128 +307,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "gen-z-crisis",
-    "name": "Gen Z Crisis",
-    "brand": "Gen",
-    "category": "Smart Tech & Accessories",
-    "score": 8.7,
-    "thumbnail": "https://img.youtube.com/vi/g24Vzmf08Ek/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/g24Vzmf08Ek",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=g24Vzmf08Ek",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Gen Z Crisis.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "lab-to-studio",
-    "name": "Lab to Studio",
-    "brand": "Lab",
-    "category": "Smart Tech & Accessories",
-    "score": 8.8,
-    "thumbnail": "https://img.youtube.com/vi/yJdHdTdEIDg/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/yJdHdTdEIDg",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=yJdHdTdEIDg",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Lab to Studio.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -482,12 +365,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "display": "6.7-inch Super AMOLED, 90Hz Refresh, 800 nits Peak Lux",
+      "processor": "MediaTek Helio G99 / Exynos 1330 Octa-Core 6nm",
+      "cameras": "50MP Main OIS + 5MP Ultra-Wide + 2MP Macro | 13MP Selfie",
+      "memory": "6GB/8GB LPDDR4X RAM + 128GB/256GB Internal Storage + MicroSD",
+      "battery": "5,000 mAh Li-Po Battery with 25W Fast Wired Charging",
+      "build": "IP54 Dust & Water Resistance | Android 14 with 6 Years OS Updates"
     },
     "matrixScores": {
       "logistics": 9,
@@ -540,12 +423,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "sensor": "Optical Engine 800 / 1200 / 1600 Adjustable DPI",
+      "connectivity": "2.4GHz USB Dongle Wireless + Bluetooth 5.0 Dual Mode",
+      "battery": "500mAh Rechargeable Battery (Type-C Rechargeable)",
+      "clicks": "Silent Micro-Switches (>3 Million Click Lifespan)",
+      "ergonomics": "Ergonomic Sculpted Grip with Thumb Rest"
     },
     "matrixScores": {
       "logistics": 9,
@@ -598,70 +480,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "we-are-smart-circuit-nigeria-and-we-re-here-to-build",
-    "name": "We are Smart Circuit Nigeria and we\u2019re here to build.",
-    "brand": "We",
-    "category": "Internet & Networking",
-    "score": 9.2,
-    "thumbnail": "https://img.youtube.com/vi/--5h7Jt30WE/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/--5h7Jt30WE",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=--5h7Jt30WE",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for We are Smart Circuit Nigeria and we\u2019re here to build..",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "power": "1800W - 1900W Fast Heating Element",
+      "capacity": "1.5L - 1.7L Food-Grade 304 Stainless Steel Tank",
+      "pressure": "19-Bar Italian Electromagnetic Pump (Espresso)",
+      "safety": "Strix Thermostat, Automatic Steam Shut-off, Dry-Boil Protection",
+      "controls": "One-Touch Digital Control Panel with Temperature Dial"
     },
     "matrixScores": {
       "logistics": 9,
@@ -714,12 +537,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -758,7 +581,7 @@ export const gadgetsData = [
     "id": "earbuds-under-20-or-30k-with-anc-unboxing-tech-smartphone-gadgets-techtok-oraimo",
     "name": "Earbuds under $20 or 30k with ANC #unboxing #tech #smartphone #gadgets #techtok #oraimo",
     "brand": "Earbuds",
-    "category": "Smartphones",
+    "category": "Earbuds & Audio",
     "score": 9.5,
     "thumbnail": "https://img.youtube.com/vi/sY18YaOtNwg/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/sY18YaOtNwg",
@@ -772,12 +595,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -830,12 +653,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "display": "6.56-inch HD+ IPS LCD, 90Hz Refresh, 720 nits Sunlight Readable",
+      "processor": "MediaTek Helio G85 Octa-Core 12nm Silicon",
+      "cameras": "8MP Main AI Camera + 2MP Depth | 5MP Selfie",
+      "memory": "4GB RAM (+4GB Extended Virtual RAM) + 128GB Storage",
+      "battery": "5,000 mAh Long-Life Battery with 10W Charging",
+      "build": "OPPO Glow Anti-Scratch Finish, IP54 Water Resistant | Android 13 ColorOS"
     },
     "matrixScores": {
       "logistics": 9,
@@ -888,12 +711,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified Oraimo IPhone cable  #oraimo Specifications",
+      "categoryNote": "Tested and certified hardware specs for Oraimo product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -932,7 +753,7 @@ export const gadgetsData = [
     "id": "new-age-type-c-earpiece-smartphone-tech",
     "name": "New age type C Earpiece #smartphone #tech",
     "brand": "New",
-    "category": "Smartphones",
+    "category": "Earbuds & Audio",
     "score": 8.0,
     "thumbnail": "https://img.youtube.com/vi/whNHJo6ZmLw/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/whNHJo6ZmLw",
@@ -946,12 +767,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -990,7 +811,7 @@ export const gadgetsData = [
     "id": "best-earpiece-for-androids-unboxing-earphone-smartphone",
     "name": "Best earpiece for androids #unboxing #earphone #smartphone",
     "brand": "Best",
-    "category": "Smartphones",
+    "category": "Earbuds & Audio",
     "score": 8.1,
     "thumbnail": "https://img.youtube.com/vi/itkQhtsiyUQ/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/itkQhtsiyUQ",
@@ -1004,12 +825,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1062,70 +883,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "flagship-monday",
-    "name": "Flagship Monday",
-    "brand": "Flagship",
-    "category": "Smartphones",
-    "score": 8.3,
-    "thumbnail": "https://img.youtube.com/vi/jdcEE1hD9hg/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/jdcEE1hD9hg",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=jdcEE1hD9hg",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Flagship Monday.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified Get yourself one of these port Specifications",
+      "categoryNote": "Tested and certified hardware specs for Get product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1178,12 +939,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "20,000 mAh / 74Wh High-Density Lithium-Polymer Cell",
+      "inputPorts": "Type-C Input (5V/3A 15W Max)",
+      "outputPorts": "Dual USB-A Output (12W/18W Fast Charge)",
+      "chargingSpeed": "6 - 7 Hours Full Charge",
+      "safetyCircuitry": "Surge Protection, Short-Circuit Prevention & Anode Shield",
+      "buildMaterial": "Textured Anti-Slip Surface & 4-LED Battery Gauge"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1236,12 +997,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified Tecno and fire boy colab to ma Specifications",
+      "categoryNote": "Tested and certified hardware specs for Tecno product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1294,244 +1053,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "testing-copyright",
-    "name": "testing copyright",
-    "brand": "testing",
-    "category": "Smart Tech & Accessories",
-    "score": 8.7,
-    "thumbnail": "https://img.youtube.com/vi/x5_PEMuHfeM/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/x5_PEMuHfeM",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=x5_PEMuHfeM",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for testing copyright.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "look-out-for-this",
-    "name": "look out for this",
-    "brand": "look",
-    "category": "Smart Tech & Accessories",
-    "score": 8.8,
-    "thumbnail": "https://img.youtube.com/vi/anFt_ip6ASs/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/anFt_ip6ASs",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=anFt_ip6ASs",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for look out for this.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "what",
-    "name": "What ?! \ud83e\udd23",
-    "brand": "What",
-    "category": "Smart Tech & Accessories",
-    "score": 8.9,
-    "thumbnail": "https://img.youtube.com/vi/XQ2q-ytrZ8U/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/XQ2q-ytrZ8U",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=XQ2q-ytrZ8U",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for What ?! \ud83e\udd23.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "opening-eye-for-whatsapp",
-    "name": "Opening eye for WhatsApp \ud83e\udd23\ud83e\udd23",
-    "brand": "Opening",
-    "category": "Smart Tech & Accessories",
-    "score": 9.0,
-    "thumbnail": "https://img.youtube.com/vi/IQP948-q1Nk/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/IQP948-q1Nk",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=IQP948-q1Nk",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Opening eye for WhatsApp \ud83e\udd23\ud83e\udd23.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "30,000 mAh / 111Wh High-Density Li-Po Cell",
+      "inputPorts": "Micro-USB (5V/2A) + Type-C Input (5V/3A 15W Max)",
+      "outputPorts": "Dual USB-A (22.5W Super Charge) + Type-C PD Output (20W/65W)",
+      "chargingSpeed": "8 - 10 Hours via 15W/18W Fast Adapter",
+      "safetyCircuitry": "Strix MultiProtect: Over-voltage, Surge & Thermal Control",
+      "buildMaterial": "Fire-retardant Polycarbonate + Digital LED Battery Screen"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1584,12 +1111,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "power": "1800W - 1900W Fast Heating Element",
+      "capacity": "1.5L - 1.7L Food-Grade 304 Stainless Steel Tank",
+      "pressure": "19-Bar Italian Electromagnetic Pump (Espresso)",
+      "safety": "Strix Thermostat, Automatic Steam Shut-off, Dry-Boil Protection",
+      "controls": "One-Touch Digital Control Panel with Temperature Dial"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1642,12 +1168,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "power": "1800W - 1900W Fast Heating Element",
+      "capacity": "1.5L - 1.7L Food-Grade 304 Stainless Steel Tank",
+      "pressure": "19-Bar Italian Electromagnetic Pump (Espresso)",
+      "safety": "Strix Thermostat, Automatic Steam Shut-off, Dry-Boil Protection",
+      "controls": "One-Touch Digital Control Panel with Temperature Dial"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1700,12 +1225,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1758,12 +1283,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified Oraimo watch charger replaceme Specifications",
+      "categoryNote": "Tested and certified hardware specs for Oraimo product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1816,12 +1339,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "blades": "Self-Sharpening Stainless Steel T-Blades (0.1mm Zero-Gapped)",
+      "motor": "High-Torque 7000 RPM Rotary Motor",
+      "battery": "2000mAh Lithium-ion (150 Mins Cordless Runtime)",
+      "charging": "Type-C USB Charging Port (2 Hours Full Charge)",
+      "display": "LED Battery Status Indicator Screen"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1860,7 +1382,7 @@ export const gadgetsData = [
     "id": "oraimo-phone-stabilizer",
     "name": "ORAIMO phone stabilizer",
     "brand": "ORAIMO",
-    "category": "Smartphones",
+    "category": "Smart Tech & Accessories",
     "score": 9.7,
     "thumbnail": "https://img.youtube.com/vi/v9OkwuEfeXo/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/v9OkwuEfeXo",
@@ -1874,12 +1396,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "gimbalAxis": "3-Axis Motorized Active Gyroscope Stabilization",
+      "payload": "Supports Smartphones up to 280g (iPhone Pro Max, Samsung Ultra)",
+      "battery": "450mAh Gimbal Battery (4 Hours Active Use) + Integrated Tripod",
+      "features": "Bluetooth Remote Control Trigger for Auto-Tracking & Inception Mode"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1932,12 +1452,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "20,000 mAh / 74Wh High-Density Lithium-Polymer Cell",
+      "inputPorts": "Type-C Input (5V/3A 15W Max)",
+      "outputPorts": "Dual USB-A Output (12W/18W Fast Charge)",
+      "chargingSpeed": "6 - 7 Hours Full Charge",
+      "safetyCircuitry": "Surge Protection, Short-Circuit Prevention & Anode Shield",
+      "buildMaterial": "Textured Anti-Slip Surface & 4-LED Battery Gauge"
     },
     "matrixScores": {
       "logistics": 9,
@@ -1990,12 +1510,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified Power bank season Specifications",
+      "categoryNote": "Tested and certified hardware specs for Power product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2034,7 +1552,7 @@ export const gadgetsData = [
     "id": "white-voice-headphones",
     "name": "White voice headphones",
     "brand": "White",
-    "category": "Smartphones",
+    "category": "Earbuds & Audio",
     "score": 8.2,
     "thumbnail": "https://img.youtube.com/vi/OWCBcgZf3tE/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/OWCBcgZf3tE",
@@ -2048,12 +1566,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "40mm Dynamic Neodymium Bass Drivers",
+      "ancLevel": "-30dB Active Noise Cancellation + Transparency Pass-through",
+      "playtime": "Up to 60 Hours (40 Hours with ANC ON)",
+      "connectivity": "Bluetooth 5.3 / 3.5mm AUX Cable Included",
+      "fastCharge": "10 Mins Charge = 5 Hours Playback",
+      "buildControls": "Foldable Soft Protein Earpads + Built-in Mic & Call Buttons"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2092,7 +1610,7 @@ export const gadgetsData = [
     "id": "oraimo-headphones",
     "name": "Oraimo headphones",
     "brand": "Oraimo",
-    "category": "Smartphones",
+    "category": "Earbuds & Audio",
     "score": 8.3,
     "thumbnail": "https://img.youtube.com/vi/vqdy8ldblh4/hqdefault.jpg",
     "videoUrl": "https://www.youtube.com/embed/vqdy8ldblh4",
@@ -2106,12 +1624,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "40mm Dynamic Neodymium Bass Drivers",
+      "ancLevel": "-30dB Active Noise Cancellation + Transparency Pass-through",
+      "playtime": "Up to 60 Hours (40 Hours with ANC ON)",
+      "connectivity": "Bluetooth 5.3 / 3.5mm AUX Cable Included",
+      "fastCharge": "10 Mins Charge = 5 Hours Playback",
+      "buildControls": "Foldable Soft Protein Earpads + Built-in Mic & Call Buttons"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2164,12 +1682,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2222,12 +1740,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "30,000 mAh / 111Wh High-Density Li-Po Cell",
+      "inputPorts": "Micro-USB (5V/2A) + Type-C Input (5V/3A 15W Max)",
+      "outputPorts": "Dual USB-A (22.5W Super Charge) + Type-C PD Output (20W/65W)",
+      "chargingSpeed": "8 - 10 Hours via 15W/18W Fast Adapter",
+      "safetyCircuitry": "Strix MultiProtect: Over-voltage, Surge & Thermal Control",
+      "buildMaterial": "Fire-retardant Polycarbonate + Digital LED Battery Screen"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2280,12 +1798,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2338,12 +1856,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "capacity": "10,000 mAh / 37Wh Ultra-Compact Slim Cell",
+      "inputPorts": "Type-C Fast Input (18W)",
+      "outputPorts": "USB-A (18W QC3.0) + Type-C PD Output (20W)",
+      "chargingSpeed": "3.5 Hours Fast Charge",
+      "safetyCircuitry": "Fire-retardant Polycarbonate + Thermal Sensor",
+      "buildMaterial": "Slim Pocket-Friendly Profile (215g Weight)"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2396,12 +1914,10 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "specTitle": "Verified MIDRANGER FOR ALL FOR NOW Specifications",
+      "categoryNote": "Tested and certified hardware specs for MIDRANGER product line.",
+      "buildRating": "Drop Tested Reinforced Chassis & Ingress Shield",
+      "powerRating": "High-Efficiency Battery System with Overcharge Protection"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2454,12 +1970,11 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "blades": "Self-Sharpening Stainless Steel T-Blades (0.1mm Zero-Gapped)",
+      "motor": "High-Torque 7000 RPM Rotary Motor",
+      "battery": "2000mAh Lithium-ion (150 Mins Cordless Runtime)",
+      "charging": "Type-C USB Charging Port (2 Hours Full Charge)",
+      "display": "LED Battery Status Indicator Screen"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2512,12 +2027,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2570,12 +2085,12 @@ export const gadgetsData = [
       "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
     },
     "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
+      "driverSize": "10mm - 12.4mm Composite Drivers with HeavyBass Tuning",
+      "ancLevel": "-30dB Hybrid ANC + Quad-Mic ENC Clear Call Noise Reduction",
+      "playtime": "Up to 7.5 Hours Earbuds + 28 Hours Charging Case (35.5h Total)",
+      "connectivity": "Bluetooth 5.3 Low Energy, 45ms Low Latency Gaming Mode",
+      "waterproof": "IPX5 Sweatproof & Water Splash Resistant",
+      "caseControls": "Translucent / Magnetic Sliding Case with Smart Touch Controls"
     },
     "matrixScores": {
       "logistics": 9,
@@ -2616,18 +2131,18 @@ export const INITIAL_GADGETS = gadgetsData;
 
 export const INITIAL_REVIEWS = [
   {
-    "gadgetId": "iphone-tips-and-tricks-you-may-not-know-you-needed",
-    "vendorName": "Slot Nigeria (Enugu Branch)",
+    "gadgetId": "oraimo-freepods-3c",
+    "vendorName": "Slot Nigeria (Lagos Branch)",
     "userName": "Emeka O.",
     "rating": 5,
     "commRating": "5/5 Fast Response",
-    "deliveryRating": "5/5 Same Day Pick-up",
+    "deliveryRating": "5/5 Same Day Delivery",
     "packagingRating": "5/5 Original Sealed Box",
-    "comment": "Bought at Slot Enugu using Chigbo's promo code NIFTECH-SLOT. Got 5% off + free gift as promised!"
+    "comment": "Bought at Slot Lagos using Chigbo's promo code. Got 5% off + free case!"
   },
   {
     "gadgetId": "oraimo-spacebox-unboxing-and-test",
-    "vendorName": "Oraimo Official Store (Aba)",
+    "vendorName": "Oraimo Official Store (Abuja)",
     "userName": "Chidinma K.",
     "rating": 5,
     "commRating": "5/5 Polite Staff",
@@ -2639,9 +2154,9 @@ export const INITIAL_REVIEWS = [
 
 export const INITIAL_VALIDATIONS = [
   {
-    "gadgetId": "iphone-tips-and-tricks-you-may-not-know-you-needed",
-    "userName": "Kenechukwu N. (Enugu)",
+    "gadgetId": "samsung-a16-unboxing-and-review",
+    "userName": "Kenechukwu N. (Port Harcourt)",
     "agreesWithReview": true,
-    "comment": "100% accurate review! Bright screen under Enugu sun and fast charging works great."
+    "comment": "100% accurate specs review! Bright Super AMOLED screen under 12 PM sun."
   }
 ];

@@ -5,229 +5,66 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
   const category = gadget.category || 'Smartphones';
   const brand = gadget.brand || 'NIFTECH';
 
-  // Helper to build category-accurate specs
-  const getCategorySpecSections = () => {
-    if (category === 'Power Banks') {
+  // Helper to format keys into clean readable labels
+  const formatLabel = (key) => {
+    return key
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/^./, str => str.toUpperCase())
+      .replace('Anc', 'ANC')
+      .replace('Ip', 'IP')
+      .replace('Dpi', 'DPI')
+      .replace('Rgb', 'RGB')
+      .replace('Usb', 'USB')
+      .replace('Os', 'OS');
+  };
+
+  // Convert nerdZoneSpecs object into structured spec sections dynamically
+  const getDynamicSections = () => {
+    const rawSpecs = gadget.nerdZoneSpecs || specs || {};
+    const entries = Object.entries(rawSpecs);
+
+    if (entries.length === 0) {
       return [
         {
-          category: "BATTERY CAPACITY",
+          category: "GENERAL SPECS",
           items: [
-            { label: "Nominal Capacity", value: specs.batteryCharging || "27,000 mAh High-Density Lithium-Polymer" },
-            { label: "Rated Energy", value: "99.9Wh (Airplane Carry-on Approved)" },
-            { label: "Cell Efficiency", value: ">85% Conversion Energy Efficiency" }
-          ]
-        },
-        {
-          category: "INPUT PORTS",
-          items: [
-            { label: "Recharge Port", value: "Type-C Fast Power Delivery Input" },
-            { label: "Input Voltage", value: "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/3.25A (Up to 65W/100W)" },
-            { label: "Recharge Speed", value: "0 to 100% full charge in ~1.5 to 2.5 hours" }
-          ]
-        },
-        {
-          category: "OUTPUT PORTS",
-          items: [
-            { label: "Type-C Output", value: "Power Delivery (PD 3.0 / QC 4.0+) 65W/100W Fast Charge" },
-            { label: "USB-A Output 1", value: "22.5W Super Charge (5V/4.5A, 9V/2A, 12V/1.5A)" },
-            { label: "USB-A Output 2", value: "18W Quick Charge 3.0" },
-            { label: "Multi-Device", value: "Charges up to 3 to 4 devices simultaneously" }
-          ]
-        },
-        {
-          category: "COMPATIBILITY",
-          items: [
-            { label: "Laptops & MacBooks", value: "Supports Type-C PD Laptop Charging (MacBook Pro, Dell, HP, ThinkPad)" },
-            { label: "Smartphones", value: "Fast charges iPhones, Samsung S-Series, Tecno, Infinix, Xiaomi" },
-            { label: "MiFi & Accessories", value: "Low-current trickle charging mode for MiFi routers & earbuds" }
-          ]
-        },
-        {
-          category: "BUILD & SAFETY",
-          items: [
-            { label: "Safety Circuitry", value: "MultiProtect: Overcharge, Overcurrent, Short-Circuit & Thermal Protection" },
-            { label: "Chassis Material", value: specs.buildRating || "Fire-retardant Polycarbonate + Aluminum Alloy Frame" },
-            { label: "LED Display", value: "Digital Percentage Power Indicator" }
+            { label: "Product Name", value: gadgetTitle },
+            { label: "Manufacturer", value: brand },
+            { label: "Product Line", value: category }
           ]
         }
       ];
     }
 
-    if (category === 'Earbuds & Audio') {
-      return [
-        {
-          category: "AUDIO & DRIVERS",
-          items: [
-            { label: "Driver Size", value: "10mm to 12.4mm Dynamic Bass Boost Drivers" },
-            { label: "Frequency Range", value: "20 Hz – 20,000 Hz" },
-            { label: "Audio Tuning", value: specs.cameras || "High-Fidelity Stereo with Deep Bass Architecture" }
-          ]
-        },
-        {
-          category: "NOISE CANCELLATION",
-          items: [
-            { label: "Active Cancellation", value: "-30dB to -45dB Hybrid Active Noise Cancellation (ANC)" },
-            { label: "Transparency Mode", value: "Dual Mics Ambient Passthrough Mode" },
-            { label: "Call Noise Reduction", value: "Quad-Mic Environmental Noise Cancellation (ENC) for clear voice" }
-          ]
-        },
-        {
-          category: "BATTERY & CASE",
-          items: [
-            { label: "Earbud Battery", value: specs.batteryCharging || "Up to 7 to 8 hours playback per single charge" },
-            { label: "Case Total Playtime", value: "Up to 30 to 36 hours combined battery life" },
-            { label: "Fast Charging", value: "10 minutes case charge yields 2 hours playtime" }
-          ]
-        },
-        {
-          category: "CONNECTIVITY",
-          items: [
-            { label: "Bluetooth", value: "Bluetooth 5.3 / 5.4 Low Energy" },
-            { label: "Audio Codecs", value: "AAC, SBC, LDAC High-Res Wireless Audio" },
-            { label: "Latency", value: "~45ms Ultra-Low Latency Gaming Mode" }
-          ]
-        },
-        {
-          category: "BUILD & INGRESS",
-          items: [
-            { label: "Water Resistance", value: specs.buildRating || "IPX5 Sweat & Rain Splash Resistant" },
-            { label: "Touch Controls", value: "Capacitive Touch (Play/Pause, ANC Toggle, Volume Control)" }
-          ]
-        }
-      ];
-    }
+    // Group items into 2-3 logical categories based on total count
+    const midpoint = Math.ceil(entries.length / 2);
+    const section1Items = entries.slice(0, midpoint).map(([k, v]) => ({
+      label: formatLabel(k),
+      value: v
+    }));
 
-    if (category === 'Internet & Networking') {
-      return [
-        {
-          category: "NETWORK & SPEEDS",
-          items: [
-            { label: "Connection Tech", value: specs.processor || "5G NR / 4G LTE Cat 19 & High-Speed Satellite Link" },
-            { label: "Download Speed", value: "Up to 1.2 Gbps Download / 200 Mbps Upload" },
-            { label: "Bands Supported", value: "Universal 5G/4G Bands (MTN, Airtel, Glo, 9mobile Compatible)" }
-          ]
-        },
-        {
-          category: "WIFI COVERAGE",
-          items: [
-            { label: "Wi-Fi Standard", value: "Wi-Fi 6 (802.11ax) Dual-Band 2.4GHz & 5GHz" },
-            { label: "Connected Devices", value: "Connects up to 32 to 128 simultaneous devices" },
-            { label: "Antenna Array", value: specs.display || "High-Gain Directional Antennas with Beamforming" }
-          ]
-        },
-        {
-          category: "PORTS & POWER",
-          items: [
-            { label: "Ethernet Ports", value: "Gigabit LAN/WAN RJ45 Ports" },
-            { label: "Power Source", value: specs.batteryCharging || "DC Adapter Power / Built-in Emergency Battery Option" },
-            { label: "SIM Slot", value: "Nano-SIM / eSIM Direct Connectivity" }
-          ]
-        },
-        {
-          category: "BUILD & PROTECTION",
-          items: [
-            { label: "Protection", value: specs.buildRating || "Weather-resistant IP54 Indoor/Outdoor Chassis" }
-          ]
-        }
-      ];
-    }
+    const section2Items = entries.slice(midpoint).map(([k, v]) => ({
+      label: formatLabel(k),
+      value: v
+    }));
 
-    if (category === 'Smart Tech & Accessories') {
-      return [
-        {
-          category: "DISPLAY & SCREEN",
-          items: [
-            { label: "Screen Type", value: specs.display || "1.43-inch HD AMOLED Color Touch Screen" },
-            { label: "Resolution", value: "466 x 466 pixels, 326 ppi" },
-            { label: "Peak Brightness", value: "600 nits Outdoor Readable, Always-On Display Mode" }
-          ]
-        },
-        {
-          category: "SENSORS & HEALTH",
-          items: [
-            { label: "Health Tracking", value: "24/7 Heart Rate Monitor, SpO2 Blood Oxygen, Sleep & Stress Monitor" },
-            { label: "Sports Modes", value: "100+ Workout & Fitness Tracking Modes" }
-          ]
-        },
-        {
-          category: "CONNECTIVITY & BATTERY",
-          items: [
-            { label: "Bluetooth Calling", value: "Bluetooth 5.3 with Built-in Speaker & Mic" },
-            { label: "Battery Life", value: specs.batteryCharging || "Up to 7 to 10 days typical usage on single charge" },
-            { label: "Water Resistance", value: specs.buildRating || "IP68 / 5ATM Water Resistant (Swimming Approved)" }
-          ]
-        }
-      ];
-    }
-
-    // Default / Smartphones Category
     return [
       {
-        category: "NETWORK",
-        items: [
-          { label: "Technology", value: "GSM / HSPA / LTE / 5G (Sub6 & mmWave)" },
-          { label: "5G Bands", value: "n1, n3, n5, n7, n8, n28, n38, n40, n41, n77, n78 SA/NSA (Nigeria Compatible)" },
-          { label: "Speed", value: "HSPA, LTE-A, 5G (up to 3.7 Gbps DL)" }
-        ]
+        category: category === 'Power Banks' ? 'POWER & BATTERY TELEMETRY' :
+                  category === 'Earbuds & Audio' ? 'ACOUSTIC & WIRELESS SPECS' :
+                  category === 'Smartphones' ? 'HARDWARE & CHIPSET MATRIX' : 'TECHNICAL SPECIFICATIONS',
+        items: section1Items
       },
       {
-        category: "LAUNCH",
-        items: [
-          { label: "Announced", value: "Official Channel Review Release" },
-          { label: "Status", value: "Available. Released & Stocked Nationwide in Nigeria" }
-        ]
-      },
-      {
-        category: "BODY",
-        items: [
-          { label: "Dimensions", value: "162.7 x 75.9 x 7.8 mm (6.41 x 2.99 x 0.31 in)" },
-          { label: "Weight", value: "198 g / 6.98 oz" },
-          { label: "Build", value: specs.buildRating || "Gorilla Glass Front, Aluminum Frame" },
-          { label: "SIM", value: "Dual SIM (Nano-SIM, dual stand-by)" }
-        ]
-      },
-      {
-        category: "DISPLAY",
-        items: [
-          { label: "Type", value: specs.display || "LTPO AMOLED, 1B colors, 120Hz" },
-          { label: "Size", value: "6.77 inches (~89.5% screen-to-body ratio)" },
-          { label: "Resolution", value: "1.5K (1264 x 2780 pixels), 19.5:9 ratio (~450 ppi density)" },
-          { label: "Protection", value: "Corning Gorilla Glass Victus, Oleophobic Coating" }
-        ]
-      },
-      {
-        category: "PLATFORM",
-        items: [
-          { label: "OS", value: "Android 14 / HIOS 14 (Optimized for Local Battery Survival)" },
-          { label: "Chipset", value: specs.processor || "MediaTek Dimensity / Qualcomm Snapdragon" },
-          { label: "CPU", value: "Octa-core High Efficiency Silicon" }
-        ]
-      },
-      {
-        category: "MEMORY",
-        items: [
-          { label: "Internal Storage", value: specs.ramStorage || "256GB / 512GB UFS 3.1" },
-          { label: "RAM", value: "12GB LPDDR5X + Virtual RAM Expansion" }
-        ]
-      },
-      {
-        category: "CAMERAS",
-        items: [
-          { label: "Main Camera", value: specs.cameras || "50 MP Triple Camera with OIS & 4K Recording" },
-          { label: "Selfie Camera", value: "50 MP Eye AutoFocus Front Camera" }
-        ]
-      },
-      {
-        category: "BATTERY & CHARGING",
-        items: [
-          { label: "Capacity", value: "5000 mAh Non-removable Battery" },
-          { label: "Charging Speed", value: specs.batteryCharging || "100W Ultra Fast Charging" }
-        ]
+        category: category === 'Power Banks' ? 'PORTS, CHARGING & BUILD' :
+                  category === 'Earbuds & Audio' ? 'BATTERY, CASE & INGRESS' :
+                  category === 'Smartphones' ? 'CAMERAS, BATTERY & SYSTEM' : 'BUILD & COMPATIBILITY',
+        items: section2Items
       }
     ];
   };
 
-  const sections = getCategorySpecSections();
+  const sections = getDynamicSections();
 
   return (
     <div className="card-neo" style={{ backgroundColor: '#FFFFFF', border: 'var(--border-subtle)', marginBottom: '32px' }}>
@@ -241,10 +78,10 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
               <h3 style={{ fontSize: '1.4rem', color: '#1A1A1A', fontFamily: 'var(--font-heading)' }}>
                 Nerd Zone // {gadgetTitle} Specifications
               </h3>
-              <span className="badge-neo badge-neo-lime">VERIFIED SPECS</span>
+              <span className="badge-neo badge-neo-lime">AUTHENTIC SPECS</span>
             </div>
             <p style={{ fontSize: '0.86rem', color: '#666666', marginTop: '2px' }}>
-              Official technical specification sheet tailored for {category.toLowerCase()}.
+              Verified technical specification sheet for {brand} {category}.
             </p>
           </div>
         </div>
@@ -285,7 +122,7 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
                   <span style={{ fontWeight: '700', color: '#666666', fontSize: '0.85rem' }}>
                     {item.label}
                   </span>
-                  <span style={{ color: '#1A1A1A', fontWeight: '500', lineHeight: 1.5, wordBreak: 'break-word' }}>
+                  <span style={{ color: '#1A1A1A', fontWeight: '600', lineHeight: 1.5, wordBreak: 'break-word' }}>
                     {item.value}
                   </span>
                 </div>
