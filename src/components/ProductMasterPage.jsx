@@ -15,7 +15,6 @@ export default function ProductMasterPage({
   const [showScoreMatrix, setShowScoreMatrix] = useState(true);
 
   const category = gadget.category || 'Smartphones';
-  const nameLower = gadget.name ? gadget.name.toLowerCase() : '';
 
   // Helper to build product-matched everyday layman usability questions & answers
   const getLaymanQuestions = () => {
@@ -23,35 +22,35 @@ export default function ProductMasterPage({
       return [
         {
           icon: "💡",
-          title: "LED Screen & Daylight Readability",
-          question: "Can you see the digital battery percentage indicator clearly outdoors in daylight?",
-          answer: gadget.quickFacts?.visibility || "High-contrast LED digital display screen is clear under direct outdoor daylight.",
+          title: "LED Display & Outdoor Visibility",
+          question: "Can you see the digital battery percentage screen clearly when standing in bright sunlight?",
+          answer: gadget.quickFacts?.visibility || "High-contrast LED digital display screen is easy to read under direct outdoor sunlight.",
           color: "#B45309",
           bg: "#FFFBEB",
           borderColor: "#D97706"
         },
         {
           icon: "🔋",
-          title: "Blackout Survival & Phone Charges",
-          question: "How many full phone charges or blackout days will this power bank provide?",
-          answer: gadget.quickFacts?.endurance || "Provides ~5 to 7 full smartphone recharges across 3+ days of power blackout.",
+          title: "Power Blackout Survival",
+          question: "How many full phone charges will this power bank provide during a 24-hour power outage?",
+          answer: gadget.quickFacts?.endurance || "Provides ~5 to 7 full smartphone recharges across 3+ days of power outage.",
           color: "var(--accent-green)",
           bg: "#ECFDF5",
           borderColor: "var(--accent-green)"
         },
         {
           icon: "⚡",
-          title: "Generator Fast-Charging Speed",
-          question: "How much energy does 15 minutes of generator run time add to this power bank?",
-          answer: "15-minute emergency generator burst adds ~2,000mAh to 3,000mAh of fast emergency power.",
+          title: "15-Minute Emergency Flash Charge",
+          question: "If you plug this power bank in for just 15 minutes, how much emergency battery boost do you get?",
+          answer: "A quick 15-minute fast charge adds ~2,000mAh of emergency backup power to charge your phone.",
           color: "var(--accent-purple)",
           bg: "#F3E8FF",
           borderColor: "var(--accent-purple)"
         },
         {
           icon: "🛡️",
-          title: "Desk Drop & Chassis Durability",
-          question: "If it falls from a table onto hard tiled floor or pavement, will the casing crack?",
+          title: "Desk Drop & Casing Protection",
+          question: "If it slips from your desk onto hard tiled floor or pavement, will the outer shell crack?",
           answer: gadget.quickFacts?.toughness || "Fire-retardant ABS+PC casing survived 3x pavement drop impact tests.",
           color: "var(--accent-orange)",
           bg: "#FFF1F2",
@@ -64,17 +63,17 @@ export default function ProductMasterPage({
       return [
         {
           icon: "🔊",
-          title: "Generator & Street Noise Drowning",
-          question: "Does Active Noise Cancellation (ANC) drown out noisy generator engines & bus traffic?",
-          answer: gadget.quickFacts?.audio || "Hybrid -30dB ANC effectively cuts out generator hum and heavy street traffic noise.",
+          title: "Background Traffic & Street Noise Drowning",
+          question: "Does Active Noise Cancellation (ANC) drown out loud street traffic & noisy surroundings?",
+          answer: gadget.quickFacts?.audio || "Hybrid -30dB ANC effectively cuts out background engine hum and heavy street noise.",
           color: "var(--accent-purple)",
           bg: "#F3E8FF",
           borderColor: "var(--accent-purple)"
         },
         {
           icon: "🔋",
-          title: "Battery Endurance on Travel Trips",
-          question: "How long will a single charge last on a long travel trip or 24-hour blackout?",
+          title: "Battery Endurance on Long Trips",
+          question: "How long will a single charge last on a long travel trip or full-day blackout?",
           answer: gadget.quickFacts?.endurance || "Provides up to 7.5 hours earbud playback + 28 hours charging case (35.5h total).",
           color: "var(--accent-green)",
           bg: "#ECFDF5",
@@ -82,8 +81,8 @@ export default function ProductMasterPage({
         },
         {
           icon: "🌧️",
-          title: "Sweat & Rain Splash Protection",
-          question: "Will heavy sweat during workouts or accidental rain ruin the earbuds?",
+          title: "Sweat & Rain Splash Resistance",
+          question: "Will heavy workout sweat or accidental rain splashes ruin these earbuds?",
           answer: "IPX5 sweatproof & rain splash resistance protects against intense workouts and rain.",
           color: "#0284C7",
           bg: "#E0F2FE",
@@ -105,7 +104,7 @@ export default function ProductMasterPage({
       return [
         {
           icon: "⚙️",
-          title: "Daily Utility & Setup",
+          title: "Daily Setup & Ease of Use",
           question: "How easy is it to plug in, pair, or operate out of the box?",
           answer: "Zero-friction plug and play operation with instant Bluetooth / USB pairing.",
           color: "#B45309",
@@ -114,8 +113,8 @@ export default function ProductMasterPage({
         },
         {
           icon: "🔋",
-          title: "Energy Consumption & Battery",
-          question: "Does it drain power quickly, and how easy is it to recharge during light cuts?",
+          title: "Energy Efficiency & Battery Life",
+          question: "Does it drain power quickly, and how easy is it to recharge when power goes off?",
           answer: gadget.quickFacts?.endurance || "High energy efficiency with fast Type-C / DC power input.",
           color: "var(--accent-green)",
           bg: "#ECFDF5",
@@ -123,7 +122,7 @@ export default function ProductMasterPage({
         },
         {
           icon: "🔊",
-          title: "Operating Sound & Noise Level",
+          title: "Operating Sound & Quietness",
           question: "Is it quiet enough to use in a home office, bedroom, or quiet space?",
           answer: gadget.quickFacts?.audio || "Low acoustic motor noise operating below 45dB threshold.",
           color: "var(--accent-purple)",
@@ -132,7 +131,7 @@ export default function ProductMasterPage({
         },
         {
           icon: "🛡️",
-          title: "Build Quality & Heat Resilience",
+          title: "Build Durability & Heat Resistance",
           question: "Can it withstand heat and daily physical handling without degrading?",
           answer: gadget.quickFacts?.toughness || "Durable heat-resistant housing with multi-layer circuit protection.",
           color: "var(--accent-orange)",
@@ -147,7 +146,7 @@ export default function ProductMasterPage({
       {
         icon: "☀️",
         title: "Sunlight Readability",
-        question: "Can you read WhatsApp messages under hot 12 PM sun without blocking screen with your hand?",
+        question: "Can you read WhatsApp messages under hot 12 PM sun without blocking the screen with your hand?",
         answer: gadget.quickFacts?.visibility || "Super AMOLED 800+ nits display reads clearly under direct afternoon sun.",
         color: "#B45309",
         bg: "#FFFBEB",
@@ -155,9 +154,9 @@ export default function ProductMasterPage({
       },
       {
         icon: "🔋",
-        title: "Battery & Generator Fast Charging",
-        question: "Will 15 minutes of generator run time charge enough battery for emergency calls?",
-        answer: gadget.quickFacts?.endurance || "25W/100W fast charge yields +45% battery in 15 minutes of generator run time.",
+        title: "15-Minute Emergency Flash Charge",
+        question: "If you plug this phone in for just 15 minutes, how much emergency battery boost do you get?",
+        answer: gadget.quickFacts?.endurance || "25W/100W fast charging yields up to +45% battery in a quick 15-minute emergency charge.",
         color: "var(--accent-green)",
         bg: "#ECFDF5",
         borderColor: "var(--accent-green)"
@@ -173,7 +172,7 @@ export default function ProductMasterPage({
       },
       {
         icon: "🛡️",
-        title: "Concrete Tile Drop Durability",
+        title: "Hard Floor & Drop Durability",
         question: "If it falls from your hand or table onto hard tiled floor, will the screen shatter?",
         answer: gadget.quickFacts?.toughness || "Gorilla Glass Victus screen withstands pavement drops up to 1.5 meters.",
         color: "var(--accent-orange)",
@@ -187,7 +186,7 @@ export default function ProductMasterPage({
 
   // Key Standout Features extracted dynamically
   const keyFeatures = [
-    `⚡ ${gadget.quickFacts?.endurance || 'High-capacity battery with fast generator charging support'}`,
+    `⚡ ${gadget.quickFacts?.endurance || 'High-capacity battery with fast 15-minute emergency charging'}`,
     `☀️ ${gadget.quickFacts?.visibility || 'Outdoor readable display under direct sunlight'}`,
     `🔊 ${gadget.quickFacts?.audio || 'High-clarity audio tuned for noisy environments'}`,
     `🛡️ ${gadget.quickFacts?.toughness || 'Drop tested durable chassis built for daily carry'}`,
@@ -200,7 +199,7 @@ export default function ProductMasterPage({
     { num: "03", label: "Build & Toughness", desc: "Premium feel vs cheap plastic, drop survival on concrete floor", score: gadget.matrixScores?.build || 9.2 },
     { num: "04", label: "Ergonomics & Comfort", desc: "Daily carry weight, pocket comfort, earpiece fatigue", score: gadget.matrixScores?.ergonomics || 8.7 },
     { num: "05", label: "Core Performance", desc: "Actual ANC noise cancellation quality, advertised speed, real utility", score: gadget.matrixScores?.performance || 9.4 },
-    { num: "06", label: "Battery & Endurance", desc: "Off-the-grid survival during 24h blackout, generator charging speed", score: gadget.matrixScores?.battery || 9.5 },
+    { num: "06", label: "Battery & Endurance", desc: "Off-the-grid survival during 24h blackout, 15-minute fast charge speed", score: gadget.matrixScores?.battery || 9.5 },
     { num: "07", label: "Software & Connectivity", desc: "App quality, Bluetooth range without drop-offs, software updates", score: gadget.matrixScores?.software || 8.9 },
     { num: "08", label: "Local Climate Resilience", desc: "Sun heat resistance, overheating threshold under direct afternoon sun", score: gadget.matrixScores?.climate || 9.1 },
     { num: "09", label: "Customer Care & Support", desc: "Authorized repair centers in Nigeria, warranty response rates", score: gadget.matrixScores?.support || 8.6 },
@@ -337,7 +336,7 @@ export default function ProductMasterPage({
       <div style={{ marginBottom: '32px' }}>
         <div style={{ marginBottom: '16px' }}>
           <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A', marginBottom: '4px' }}>
-            ⚡ Everyday Usability: Product-Matched Layman Questions
+            ⚡ Everyday Usability: Simple Real-Life Questions
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666' }}>
             Simple, relatable answers to everyday questions tailored specifically for {gadget.name}.
