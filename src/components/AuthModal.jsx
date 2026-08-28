@@ -13,7 +13,7 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
     email: '',
     phone: '',
     password: '',
-    location: 'Enugu, Nigeria'
+    location: 'Lagos, Nigeria'
   });
 
   const handleChange = (e) => {
@@ -99,193 +99,173 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
           borderRadius: '24px',
           padding: '36px',
           border: 'var(--border-subtle)',
-          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.15)'
+          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.18)'
         }}
       >
-        {/* Close Button */}
-        <button 
-          onClick={onClose}
-          style={{ 
-            position: 'absolute', 
-            top: '20px', 
-            right: '20px', 
-            background: 'var(--bg-card-alt)', 
-            border: 'var(--border-subtle)', 
-            borderRadius: '50%',
-            width: '36px',
-            height: '36px',
-            fontSize: '1rem', 
-            cursor: 'pointer', 
-            fontWeight: '900', 
-            color: '#1A1A1A',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          ✕
-        </button>
-
-        {/* Modal Brand Header */}
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#1A1A1A', color: '#FFF', borderRadius: 'var(--radius-pill)', padding: '6px 18px', fontWeight: '900', fontSize: '1.1rem', marginBottom: '12px' }}>
-            <span>Gadget Life</span>
-            <span style={{ display: 'inline-flex', width: '18px', height: '12px', borderRadius: '2px', overflow: 'hidden' }}>
-              <span style={{ flex: 1, backgroundColor: '#008751' }}></span>
-              <span style={{ flex: 1, backgroundColor: '#FFFFFF' }}></span>
-              <span style={{ flex: 1, backgroundColor: '#008751' }}></span>
-            </span>
+        {/* Modal Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '1.8rem' }}>📱🎧</span>
+            <div>
+              <h2 style={{ fontSize: '1.5rem', color: '#1A1A1A', margin: 0 }}>
+                {mode === 'signup' ? 'Create Account' : 'Welcome Back'}
+              </h2>
+              <p style={{ fontSize: '0.82rem', color: '#666', margin: 0 }}>
+                {mode === 'signup' ? 'Join thousands of tech buyers across Nigeria' : 'Sign in to access verified vendor deals nationwide'}
+              </p>
+            </div>
           </div>
-
-          <h2 style={{ fontSize: '1.8rem', color: '#1A1A1A', marginBottom: '6px' }}>
-            {mode === 'signup' ? 'Create Your Account' : 'Welcome Back'}
-          </h2>
-          <p style={{ fontSize: '0.88rem', color: '#666' }}>
-            {mode === 'signup' 
-              ? 'Join Chigbo’s verified buyer network to unlock local Southeast vendor deals & promo codes.' 
-              : 'Sign in to access your saved vendor vouchers and preference profile.'}
-          </p>
+          <button onClick={onClose} style={{ background: 'transparent', border: 'none', fontSize: '1.4rem', cursor: 'pointer', color: '#888' }}>✕</button>
         </div>
 
-        {/* Mode Switcher Tabs */}
-        <div style={{ display: 'flex', gap: '8px', background: 'var(--bg-card-alt)', padding: '6px', borderRadius: '16px', marginBottom: '24px', border: 'var(--border-subtle)' }}>
+        {/* Mode Switcher Pills */}
+        <div style={{ display: 'flex', gap: '8px', background: 'var(--bg-card-alt)', padding: '4px', borderRadius: 'var(--radius-pill)', marginBottom: '24px', border: 'var(--border-subtle)' }}>
           <button 
-            type="button"
-            onClick={() => { setMode('signup'); setErrorMsg(''); setSuccessMsg(''); }}
+            onClick={() => setMode('signup')}
             style={{ 
               flex: 1, 
-              padding: '10px', 
-              borderRadius: '12px', 
+              padding: '8px', 
+              borderRadius: 'var(--radius-pill)', 
               border: 'none', 
               fontWeight: '800', 
               fontSize: '0.88rem', 
               cursor: 'pointer',
-              backgroundColor: mode === 'signup' ? '#1A1A1A' : 'transparent',
-              color: mode === 'signup' ? '#FFFFFF' : '#666',
-              transition: 'all 0.2s ease'
+              backgroundColor: mode === 'signup' ? 'var(--accent-green)' : 'transparent',
+              color: mode === 'signup' ? '#FFF' : '#666'
             }}
           >
-            📝 Create Account
+            Create Account
           </button>
           <button 
-            type="button"
-            onClick={() => { setMode('signin'); setErrorMsg(''); setSuccessMsg(''); }}
+            onClick={() => setMode('signin')}
             style={{ 
               flex: 1, 
-              padding: '10px', 
-              borderRadius: '12px', 
+              padding: '8px', 
+              borderRadius: 'var(--radius-pill)', 
               border: 'none', 
               fontWeight: '800', 
               fontSize: '0.88rem', 
               cursor: 'pointer',
-              backgroundColor: mode === 'signin' ? '#1A1A1A' : 'transparent',
-              color: mode === 'signin' ? '#FFFFFF' : '#666',
-              transition: 'all 0.2s ease'
+              backgroundColor: mode === 'signin' ? 'var(--accent-purple)' : 'transparent',
+              color: mode === 'signin' ? '#FFF' : '#666'
             }}
           >
-            🔐 Sign In
+            Sign In
           </button>
         </div>
 
-        {/* Alerts */}
         {errorMsg && (
-          <div style={{ backgroundColor: '#FEE2E2', color: '#B91C1C', padding: '12px 16px', borderRadius: '12px', fontSize: '0.85rem', fontWeight: '700', marginBottom: '16px', border: '1px solid #FECACA' }}>
+          <div style={{ backgroundColor: '#FEE2E2', color: '#B91C1C', padding: '10px 14px', borderRadius: '12px', fontSize: '0.84rem', fontWeight: '700', marginBottom: '16px' }}>
             ⚠️ {errorMsg}
           </div>
         )}
 
         {successMsg && (
-          <div style={{ backgroundColor: '#E6F5ED', color: '#008751', padding: '12px 16px', borderRadius: '12px', fontSize: '0.85rem', fontWeight: '700', marginBottom: '16px', border: '1px solid #B8E4CD' }}>
+          <div style={{ backgroundColor: '#DCFCE7', color: '#15803D', padding: '10px 14px', borderRadius: '12px', fontSize: '0.84rem', fontWeight: '700', marginBottom: '16px' }}>
             ✅ {successMsg}
           </div>
         )}
 
-        {/* Auth Form */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {mode === 'signup' && (
-            <>
-              <label style={{ fontWeight: '700', fontSize: '0.85rem', color: '#1A1A1A' }}>Full Name *</label>
+            <div>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A1A1A', marginBottom: '4px' }}>
+                Full Name *
+              </label>
               <input 
-                name="fullName" 
                 type="text" 
-                placeholder="e.g. Chinedu Okafor" 
-                value={formData.fullName}
-                onChange={handleChange}
+                name="fullName" 
+                placeholder="e.g. Chigbo Nwachukwu" 
+                value={formData.fullName} 
+                onChange={handleChange} 
                 className="input-neo" 
                 required 
               />
-
-              <label style={{ fontWeight: '700', fontSize: '0.85rem', color: '#1A1A1A' }}>Phone Number (Nigerian Format 🇳🇬) *</label>
-              <div style={{ position: 'relative' }}>
-                <input 
-                  name="phone" 
-                  type="tel" 
-                  placeholder="+234 803 123 4567 or 08031234567" 
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="input-neo" 
-                  required 
-                />
-                <span style={{ position: 'absolute', right: '14px', top: '18px', fontSize: '1rem' }}>🇳🇬</span>
-              </div>
-
-              <label style={{ fontWeight: '700', fontSize: '0.85rem', color: '#1A1A1A' }}>Primary Location *</label>
-              <select 
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                className="input-neo"
-                style={{ backgroundColor: '#FFF' }}
-              >
-                <option value="Enugu, Nigeria">Enugu State (Ogui, Independence Layout, Nsukka)</option>
-                <option value="Onitsha, Nigeria">Anambra State (Onitsha, Nnewi, Awka)</option>
-                <option value="Aba, Nigeria">Abia State (Aba, Umuahia)</option>
-                <option value="Owerri, Nigeria">Imo State (Owerri, Orlu)</option>
-                <option value="Lagos, Nigeria">Lagos State (Ikeja, Lekki, Yaba)</option>
-                <option value="Abuja, Nigeria">Abuja FCT (Garki, Wuse, Maitama)</option>
-              </select>
-            </>
+            </div>
           )}
 
-          <label style={{ fontWeight: '700', fontSize: '0.85rem', color: '#1A1A1A' }}>Email Address *</label>
-          <input 
-            name="email" 
-            type="email" 
-            placeholder="chigbo@gadgetlife.ng" 
-            value={formData.email}
-            onChange={handleChange}
-            className="input-neo" 
-            required 
-          />
+          <div>
+            <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A1A1A', marginBottom: '4px' }}>
+              Email Address *
+            </label>
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="name@example.com" 
+              value={formData.email} 
+              onChange={handleChange} 
+              className="input-neo" 
+              required 
+            />
+          </div>
 
-          <label style={{ fontWeight: '700', fontSize: '0.85rem', color: '#1A1A1A' }}>Password *</label>
-          <input 
-            name="password" 
-            type="password" 
-            placeholder="••••••••" 
-            value={formData.password}
-            onChange={handleChange}
-            className="input-neo" 
-            required 
-          />
+          {mode === 'signup' && (
+            <div>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A1A1A', marginBottom: '4px' }}>
+                Phone Number (Nigerian Format) 🇳🇬 *
+              </label>
+              <input 
+                type="tel" 
+                name="phone" 
+                placeholder="+234 801 234 5678" 
+                value={formData.phone} 
+                onChange={handleChange} 
+                className="input-neo" 
+                required 
+              />
+            </div>
+          )}
+
+          {mode === 'signup' && (
+            <div>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A1A1A', marginBottom: '4px' }}>
+                State / Location in Nigeria 🇳🇬
+              </label>
+              <select name="location" value={formData.location} onChange={handleChange} className="input-neo">
+                <option value="Lagos, Nigeria">Lagos, Nigeria</option>
+                <option value="Abuja (FCT), Nigeria">Abuja (FCT), Nigeria</option>
+                <option value="Port Harcourt (Rivers), Nigeria">Port Harcourt (Rivers), Nigeria</option>
+                <option value="Kano, Nigeria">Kano, Nigeria</option>
+                <option value="Ibadan (Oyo), Nigeria">Ibadan (Oyo), Nigeria</option>
+                <option value="Enugu / Anambra, Nigeria">Enugu / Anambra, Nigeria</option>
+                <option value="Kaduna, Nigeria">Kaduna, Nigeria</option>
+                <option value="Edo / Delta, Nigeria">Edo / Delta, Nigeria</option>
+                <option value="Nationwide Delivery">Other / Nationwide Delivery</option>
+              </select>
+            </div>
+          )}
+
+          <div>
+            <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', color: '#1A1A1A', marginBottom: '4px' }}>
+              Password *
+            </label>
+            <input 
+              type="password" 
+              name="password" 
+              placeholder="••••••••" 
+              value={formData.password} 
+              onChange={handleChange} 
+              className="input-neo" 
+              required 
+            />
+          </div>
 
           <button 
-            type="submit"
+            type="submit" 
+            className={`btn-neo ${mode === 'signup' ? 'btn-neo-lime' : 'btn-neo-purple'}`} 
             disabled={loading}
-            className="btn-neo btn-neo-lime" 
-            style={{ width: '100%', padding: '14px', fontSize: '0.98rem', fontWeight: '900', marginTop: '8px' }}
+            style={{ padding: '14px', fontSize: '0.95rem', fontWeight: '900', marginTop: '8px' }}
           >
-            {loading 
-              ? '⏳ Authenticating...' 
-              : mode === 'signup' 
-                ? '🚀 Complete Sign Up & Unlock Deals' 
-                : '🔐 Sign In'}
+            {loading ? 'Processing...' : mode === 'signup' ? '🔐 Create Account & Unlock Deals' : '🔑 Sign In'}
           </button>
         </form>
 
-        {/* Footer Note */}
-        <div style={{ marginTop: '20px', textAlign: 'center', fontSize: '0.78rem', color: '#888' }}>
-          ⚡ Powered by Supabase Backend & NIFTECH Verified Buyer Network
+        <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.82rem', color: '#666' }}>
+          {mode === 'signup' ? (
+            <span>Already have an account? <strong onClick={() => setMode('signin')} style={{ color: 'var(--accent-purple)', cursor: 'pointer' }}>Sign In here</strong></span>
+          ) : (
+            <span>Don't have an account? <strong onClick={() => setMode('signup')} style={{ color: 'var(--accent-green)', cursor: 'pointer' }}>Create one now</strong></span>
+          )}
         </div>
       </div>
     </div>

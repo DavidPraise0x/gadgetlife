@@ -36,7 +36,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
             Everyday Usability & Real-World Tech Realities in Nigeria.
           </h1>
           <p style={{ fontSize: '1.02rem', color: '#555555', marginBottom: '20px', fontWeight: '500', lineHeight: 1.6 }}>
-            Translating complex specs into clear layman answers. Read localized real-world tests on sun visibility, generator charging speed, Keke noise drowning, concrete drop durability, and verified Southeast vendor promo codes.
+            Translating complex specs into clear layman answers. Read localized real-world tests on sun visibility, generator charging speed, traffic noise drowning, concrete drop durability, and verified nationwide vendor promo codes across Nigeria.
           </p>
 
           <button 
@@ -61,14 +61,14 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                 🎙️ About Chigbo & NIFTECH
               </h3>
               <p style={{ color: '#444444', marginBottom: '12px' }}>
-                <strong>NIFTECH</strong> (founded by tech reviewer & storyteller <strong>Chigbo</strong>) is a pioneer in Nigerian consumer technology journalism. Built on the channel <a href="https://www.youtube.com/@chigbo-niftech" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-green)', fontWeight: '700' }}>@chigbo-niftech</a>, NIFTECH bridges the gap between high-flying spec sheets and the real-world friction of living and working in Nigeria.
+                <strong>NIFTECH</strong> (founded by tech reviewer & storyteller <strong>Chigbo</strong>) is a pioneer in Nigerian consumer technology journalism. Built on the channel <a href="https://www.youtube.com/@chigbo-niftech" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-green)', fontWeight: '700' }}>@chigbo-niftech</a>, NIFTECH bridges the gap between high-flying spec sheets and the real-world friction of living and working anywhere in Nigeria.
               </p>
               <p style={{ color: '#444444', marginBottom: '12px' }}>
-                Instead of regurgitating synthetic benchmarks, Chigbo evaluates gadgets against local realities: <em>Can you read this screen under 12 PM Enugu sunlight? Will 15 minutes of generator fast-charging give you enough battery to survive a 24-hour blackout? Does Active Noise Cancellation actually drown out a roaring Keke engine on New Market Road in Onitsha?</em>
+                Instead of regurgitating synthetic benchmarks, Chigbo evaluates gadgets against everyday Nigerian realities: <em>Can you read this screen under direct 12 PM Nigerian sunlight? Will 15 minutes of generator fast-charging give you enough battery to survive a 24-hour blackout? Does Active Noise Cancellation actually drown out heavy street traffic and bus engines?</em>
               </p>
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '14px' }}>
-                <span className="badge-neo badge-neo-lime">📍 Southeast Regional Focus</span>
-                <span className="badge-neo badge-neo-yellow">🛒 Vetted Local Vendors</span>
+                <span className="badge-neo badge-neo-lime">🇳🇬 100% Nationwide Coverage</span>
+                <span className="badge-neo badge-neo-yellow">🛒 Vetted Local & Online Vendors</span>
                 <span className="badge-neo badge-neo-purple">🎥 4K Cinematic Field Reviews</span>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
             📱 All Vetted Gadgets ({filteredGadgets.length})
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666666' }}>
-            Click any gadget card below to open its GSMArena spec sheet, 10-point rating matrix, and verified vendor deals.
+            Click any gadget card below to open its GSMArena spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
           </p>
         </div>
       </div>
@@ -197,7 +197,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                   }}
                 />
                 <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '0.75rem' }}>
-                  ⭐ {gadget.score} / 10
+                  ⭐ {gadget.score}
                 </span>
               </div>
 
@@ -219,7 +219,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
             <div>
               <div style={{ borderTop: 'var(--border-subtle)', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ fontSize: '0.78rem', color: 'var(--accent-green)', fontWeight: '700' }}>
-                  🛒 Verified Stores Available
+                  🛒 Verified Stores Nationwide
                 </span>
                 <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.75rem' }}>
                   Read Review →

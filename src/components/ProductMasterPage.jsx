@@ -20,28 +20,20 @@ export default function ProductMasterPage({
     `☀️ ${gadget.quickFacts?.visibility || 'Outdoor readable display under direct sunlight'}`,
     `🔊 ${gadget.quickFacts?.audio || 'High-clarity audio tuned for noisy environments'}`,
     `🛡️ ${gadget.quickFacts?.toughness || 'Drop tested durable chassis built for daily carry'}`,
-    `🛒 Verified Southeast vendor stock with local warranty and promo codes`
-  ];
-
-  // Local Gadget Banter & Jokes
-  const gadgetJokes = [
-    `⚡ "If NEPA brings light for just 5 minutes while you're charging this, you can watch 3 full seasons of movies before the transformer remembers to trip off again!"`,
-    `🔊 "The Noise Cancellation is so strong that when your mom calls your name from the kitchen, you can genuinely claim you were listening to high-fidelity audio in good conscience."`,
-    `🛡️ "Drop test result: It fell out of a moving Keke in Onitsha, bounced off the gutter onto concrete, and the gutter was the one that sustained structural damage."`,
-    `🔋 "This battery lasts so long that your neighbours will start suspecting you own a secret solar farm in your room."`
+    `🛒 Verified nationwide vendor stock with warranty and promo codes across Nigeria`
   ];
 
   const matrixMetrics = [
-    { num: "01", label: "Logistics & Delivery", desc: "Shipping times, waybill costs to Southeast, vendor reliability", score: gadget.matrixScores?.logistics || 9.0 },
+    { num: "01", label: "Logistics & Delivery", desc: "Shipping times, waybill costs across Nigeria, vendor reliability", score: gadget.matrixScores?.logistics || 9.0 },
     { num: "02", label: "Setup & Friction", desc: "Out-of-the-box experience, manual steps, companion app reliability", score: gadget.matrixScores?.setup || 8.8 },
-    { num: "03", label: "Build & Toughness", desc: "Premium feel vs cheap plastic, drop survival on concrete", score: gadget.matrixScores?.build || 9.2 },
-    { num: "04", label: "Ergonomics & Comfort", desc: "Daily carry weight, earpiece fatigue, physical comfort", score: gadget.matrixScores?.ergonomics || 8.7 },
-    { num: "05", label: "Core Performance", desc: "Actual ANC quality, advertised speed, real-world utility", score: gadget.matrixScores?.performance || 9.4 },
-    { num: "06", label: "Battery & Endurance", desc: "Off-the-grid survival, generator fast-charging performance", score: gadget.matrixScores?.battery || 9.5 },
-    { num: "07", label: "Software & Connectivity", desc: "App quality, Bluetooth drop-offs, OS update frequency", score: gadget.matrixScores?.software || 8.9 },
-    { num: "08", label: "Local Climate Resilience", desc: "Sun heat resistance, overheating threshold, network stability", score: gadget.matrixScores?.climate || 9.1 },
-    { num: "09", label: "Customer Care & Support", desc: "Local repair centers in Southeast, warranty response rates", score: gadget.matrixScores?.support || 8.6 },
-    { num: "10", label: "Value for Naira", desc: "Price-to-performance ratio and overall bang-for-buck", score: gadget.matrixScores?.value || 9.3 }
+    { num: "03", label: "Build & Toughness", desc: "Premium feel vs cheap plastic, drop survival on concrete floor", score: gadget.matrixScores?.build || 9.2 },
+    { num: "04", label: "Ergonomics & Comfort", desc: "Daily carry weight, pocket comfort, earpiece fatigue", score: gadget.matrixScores?.ergonomics || 8.7 },
+    { num: "05", label: "Core Performance", desc: "Actual ANC noise cancellation quality, advertised speed, real utility", score: gadget.matrixScores?.performance || 9.4 },
+    { num: "06", label: "Battery & Endurance", desc: "Off-the-grid survival during 24h blackout, generator charging speed", score: gadget.matrixScores?.battery || 9.5 },
+    { num: "07", label: "Software & Connectivity", desc: "App quality, Bluetooth range without drop-offs, software updates", score: gadget.matrixScores?.software || 8.9 },
+    { num: "08", label: "Local Climate Resilience", desc: "Sun heat resistance, overheating threshold under direct afternoon sun", score: gadget.matrixScores?.climate || 9.1 },
+    { num: "09", label: "Customer Care & Support", desc: "Authorized repair centers in Nigeria, warranty response rates", score: gadget.matrixScores?.support || 8.6 },
+    { num: "10", label: "Value for Naira", desc: "Price-to-performance ratio and overall bang-for-your-naira", score: gadget.matrixScores?.value || 9.3 }
   ];
 
   return (
@@ -92,7 +84,7 @@ export default function ProductMasterPage({
                   onClick={() => setShowVideoModal(true)}
                   style={{ fontSize: '0.95rem', padding: '12px 24px' }}
                 >
-                  ▶ Watch Video Essay
+                  ▶ Watch Video Review
                 </button>
               </div>
             </div>
@@ -120,7 +112,7 @@ export default function ProductMasterPage({
 
             <h1 style={{ fontSize: '2.4rem', marginBottom: '16px', color: '#1A1A1A' }}>{gadget.name}</h1>
             
-            {/* Numeric Rating Score (No 'over 10') */}
+            {/* Numeric Rating Score */}
             <div style={{ 
               display: 'inline-flex', 
               alignItems: 'center', 
@@ -170,63 +162,64 @@ export default function ProductMasterPage({
         </div>
       </div>
 
-      {/* Local Gadget Banter & Jokes Section */}
-      <div className="card-neo" style={{ backgroundColor: '#FFFBEB', border: '1px solid #FDE68A', marginBottom: '32px', padding: '24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-          <span style={{ fontSize: '1.8rem' }}>😂</span>
-          <div>
-            <h3 style={{ fontSize: '1.25rem', color: '#B45309', fontFamily: 'var(--font-heading)' }}>
-              Chigbo's Local Gadget Banter & Tech Jokes
-            </h3>
-            <p style={{ fontSize: '0.84rem', color: '#78350F' }}>
-              Relatable real-world tech humor from everyday life in Nigeria.
-            </p>
-          </div>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px', marginTop: '16px' }}>
-          {gadgetJokes.map((joke, idx) => (
-            <div key={idx} style={{ background: '#FFFFFF', padding: '16px', borderRadius: '12px', border: '1px solid #FCD34D', fontSize: '0.9rem', color: '#1A1A1A', fontWeight: '600', lineHeight: 1.5 }}>
-              {joke}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Quick Facts Section */}
+      {/* Quick Facts Section: Simple Layman Everyday Examples */}
       <div style={{ marginBottom: '32px' }}>
-        <h2 style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.4rem' }}>
-          <span>⚡ Quick Facts: Everyday Usability Questions</span>
-          <span className="badge-neo badge-neo-lime">LAYMAN ANSWERS</span>
-        </h2>
+        <div style={{ marginBottom: '16px' }}>
+          <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A', marginBottom: '4px' }}>
+            ⚡ Everyday Usability: Real-Life Nigerian Questions
+          </h2>
+          <p style={{ fontSize: '0.88rem', color: '#666' }}>
+            Simple, relatable answers to everyday questions before buying.
+          </p>
+        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
           <div className="card-neo" style={{ borderLeft: '4px solid #D97706', backgroundColor: '#FFFBEB' }}>
-            <h3 style={{ fontSize: '1.05rem', marginBottom: '8px', color: '#B45309' }}>☀️ Sunlight Visibility</h3>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A' }}>{gadget.quickFacts.visibility}</p>
+            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: '#B45309' }}>☀️ Sunlight Readability</h3>
+            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
+              Can you see messages under 12 PM afternoon sun without cupping your hand?
+            </p>
+            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
+              {gadget.quickFacts.visibility}
+            </p>
           </div>
 
           <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-green)', backgroundColor: '#ECFDF5' }}>
-            <h3 style={{ fontSize: '1.05rem', marginBottom: '8px', color: 'var(--accent-green)' }}>🔋 Real-World Endurance</h3>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A' }}>{gadget.quickFacts.endurance}</p>
+            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-green)' }}>🔋 Battery & Generator Charging</h3>
+            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
+              Will it survive a 24-hour blackout, and how fast does it charge on a generator?
+            </p>
+            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
+              {gadget.quickFacts.endurance}
+            </p>
           </div>
 
           <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-purple)', backgroundColor: '#F3E8FF' }}>
-            <h3 style={{ fontSize: '1.05rem', marginBottom: '8px', color: 'var(--accent-purple)' }}>🔊 Volume & Audio Clarity</h3>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A' }}>{gadget.quickFacts.audio}</p>
+            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-purple)' }}>🔊 Sound & Noise Cancellation</h3>
+            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
+              Can you hear calls clearly when standing near heavy street traffic or a generator?
+            </p>
+            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
+              {gadget.quickFacts.audio}
+            </p>
           </div>
 
           <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-orange)', backgroundColor: '#FFF1F2' }}>
-            <h3 style={{ fontSize: '1.05rem', marginBottom: '8px', color: 'var(--accent-orange)' }}>🛡️ Toughness & Drops</h3>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A' }}>{gadget.quickFacts.toughness}</p>
+            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-orange)' }}>🛡️ Drop & Impact Durability</h3>
+            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
+              If it falls from your hand, table, or pocket onto hard tiled floor, will it shatter?
+            </p>
+            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
+              {gadget.quickFacts.toughness}
+            </p>
           </div>
         </div>
       </div>
 
-      {/* ULTRA-NERDY HARDWARE SPECIFICATION TERMINAL */}
+      {/* NERD ZONE HARDWARE SPECIFICATIONS */}
       <NerdZone specs={gadget.nerdZoneSpecs} gadget={gadget} />
 
-      {/* 10-Point Rating Matrix (Structured Editorial Table, No '/ 10') */}
+      {/* 10-Point Rating Matrix Table */}
       <div className="card-neo" style={{ backgroundColor: '#FFFFFF', marginBottom: '32px', padding: '28px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '20px' }}>
           <div>
@@ -234,7 +227,7 @@ export default function ProductMasterPage({
               📊 The 10-Point Rating Matrix Table
             </h3>
             <p style={{ fontSize: '0.88rem', color: '#666' }}>
-              Granular scoring table evaluating the full product lifecycle: from purchase to daily coexistence in Nigeria.
+              Granular scoring table evaluating the full product lifecycle: from purchase to daily coexistence across Nigeria.
             </p>
           </div>
           <button 
@@ -300,9 +293,9 @@ export default function ProductMasterPage({
           <span className="badge-neo badge-neo-lime">VERIFIED BUYING OPTIONS</span>
         </div>
 
-        <h2 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#1A1A1A' }}>🛒 Where to Buy (Southeast & Nationwide)</h2>
+        <h2 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#1A1A1A' }}>🛒 Where to Buy (Nationwide Across All 36 States & FCT)</h2>
         <p style={{ fontSize: '0.92rem', color: '#666', marginBottom: '20px' }}>
-          Vetted vendor shops with physical store addresses, direct Instagram links, and exclusive custom promo codes.
+          Vetted vendor shops with physical store addresses, direct Instagram links, online store options, and exclusive custom promo codes.
         </p>
 
         {!user ? (
@@ -327,7 +320,7 @@ export default function ProductMasterPage({
                   </div>
 
                   <div style={{ marginBottom: '14px', fontSize: '0.88rem', color: '#555' }}>
-                    <strong style={{ display: 'block', color: '#1A1A1A' }}>📍 Physical Address:</strong>
+                    <strong style={{ display: 'block', color: '#1A1A1A' }}>📍 Store Location / Delivery:</strong>
                     <p style={{ margin: '2px 0 8px 0' }}>{vendor.address}</p>
 
                     <strong style={{ display: 'block', color: '#1A1A1A' }}>🔗 Verified Channels:</strong>

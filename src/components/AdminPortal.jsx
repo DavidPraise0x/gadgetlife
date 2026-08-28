@@ -116,7 +116,7 @@ export default function AdminPortal({ gadgets, vendorReviews, productValidations
               <span className="badge-neo badge-neo-purple">AUTHENTICATED ADMIN</span>
             </div>
             <p style={{ fontSize: '0.92rem', color: '#666' }}>
-              Manage registered buyers, monitor Southeast vendor discount codes, and view site analytics.
+              Manage registered buyers nationwide across Nigeria, monitor vendor discount codes, and view site analytics.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function AdminPortal({ gadgets, vendorReviews, productValidations
           <div style={{ fontSize: '2.2rem', fontWeight: '900', color: 'var(--accent-orange)', marginTop: '4px' }}>
             🏢 12
           </div>
-          <div style={{ fontSize: '0.78rem', color: '#888', marginTop: '4px' }}>Enugu, Onitsha, Aba, Awka, Owerri</div>
+          <div style={{ fontSize: '0.78rem', color: '#888', marginTop: '4px' }}>Lagos, Abuja, PH, Kano & Nationwide</div>
         </div>
 
         <div className="card-neo" style={{ backgroundColor: '#FFFFFF' }}>
@@ -184,7 +184,7 @@ export default function AdminPortal({ gadgets, vendorReviews, productValidations
             <div>
               <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A' }}>Registered User Database</h2>
               <p style={{ fontSize: '0.85rem', color: '#666' }}>
-                Full list of user signups including email, phone numbers, and location.
+                Full list of user signups including email, phone numbers, and location across Nigeria.
               </p>
             </div>
 
@@ -243,23 +243,23 @@ export default function AdminPortal({ gadgets, vendorReviews, productValidations
       {/* TAB 2: VENDOR VOUCHERS */}
       {activeTab === 'vendors' && (
         <div className="card-neo" style={{ backgroundColor: '#FFFFFF' }}>
-          <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A', marginBottom: '16px' }}>Active Southeast Vendor Vouchers</h2>
+          <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A', marginBottom: '16px' }}>Active Nationwide Vendor Vouchers & Discounts</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
             <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>Slot Nigeria (Enugu)</div>
-              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>No. 4 Ogui Road, Opp. Polo Park Mall</div>
+              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>Slot Nigeria (Nationwide Outlets)</div>
+              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>Lagos, Abuja, Port Harcourt, Enugu & All Major Cities</div>
               <span className="badge-neo badge-neo-lime">CODE: NIFTECH-SLOT</span>
             </div>
 
             <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>Oraimo Official (Aba)</div>
-              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>Factory Road, Opp. Enyimba Hotel</div>
+              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>Oraimo Official Online & Stores</div>
+              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>Nationwide Doorstep Delivery Across 36 States</div>
               <span className="badge-neo badge-neo-purple">CODE: NIFTECH-ORAIMO</span>
             </div>
 
             <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>3C Hub (Onitsha Main Market)</div>
-              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>New Market Road Plaza</div>
+              <div style={{ fontWeight: '800', color: '#1A1A1A' }}>3C Hub & Official Electronics Hubs</div>
+              <div style={{ fontSize: '0.82rem', color: '#666', margin: '4px 0' }}>Major Commercial Centers Nationwide</div>
               <span className="badge-neo badge-neo-yellow">CODE: CHIGBO-3CHUB</span>
             </div>
           </div>

@@ -1,400 +1,300 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function NerdZone({ specs = {}, gadget = {} }) {
-  const [activeTab, setActiveTab] = useState('gsmarena'); // 'gsmarena' | 'telemetry' | 'terminal' | 'json'
-
-  const display = specs.display || 'High-Resolution Touchscreen Display';
-  const processor = specs.processor || 'High-Performance Processor Chipset';
-  const batteryCharging = specs.batteryCharging || 'High-Capacity Fast Charge Battery';
-  const ramStorage = specs.ramStorage || 'High-Speed LPDDR Memory + Internal Storage';
-  const cameras = specs.cameras || 'High-Resolution Optics with Stabilization';
-  const buildRating = specs.buildRating || 'Ingress Protection & Durable Chassis';
-
-  const gadgetId = gadget.id || 'device-001';
   const gadgetTitle = gadget.name || 'Gadget Item';
+  const category = gadget.category || 'Smartphones';
   const brand = gadget.brand || 'NIFTECH';
 
-  // GSMArena Structured Spec Categories
-  const gsmArenaSections = [
-    {
-      category: "NETWORK",
-      items: [
-        { label: "Technology", value: "GSM / HSPA / LTE / 5G (Sub6 & mmWave)" },
-        { label: "5G Bands", value: "n1, n3, n5, n7, n8, n28, n38, n40, n41, n77, n78 SA/NSA (Nigeria Compatible)" },
-        { label: "Speed", value: "HSPA, LTE-A, 5G (up to 3.7 Gbps DL)" }
-      ]
-    },
-    {
-      category: "LAUNCH",
-      items: [
-        { label: "Announced", value: "Official Channel Review Release" },
-        { label: "Status", value: "Available. Released in Nigeria (Southeast Regional Stocked)" }
-      ]
-    },
-    {
-      category: "BODY",
-      items: [
-        { label: "Dimensions", value: "162.7 x 75.9 x 7.8 mm (6.41 x 2.99 x 0.31 in)" },
-        { label: "Weight", value: "198 g / 6.98 oz" },
-        { label: "Build", value: buildRating },
-        { label: "SIM", value: "Dual SIM (Nano-SIM, dual stand-by)" },
-        { label: "Durability", value: "Concrete Pavement Drop Tested & Heat Resistant" }
-      ]
-    },
-    {
-      category: "DISPLAY",
-      items: [
-        { label: "Type", value: display.includes('AMOLED') ? display : `${display} (1B colors, 120Hz)` },
-        { label: "Size", value: "6.77 inches (~89.5% screen-to-body ratio)" },
-        { label: "Resolution", value: "1.5K (1264 x 2780 pixels), 19.5:9 ratio (~450 ppi density)" },
-        { label: "Protection", value: "Corning Gorilla Glass Victus, Oleophobic Coating" },
-        { label: "Peak Lux", value: "1,400 nits Peak Brightness — Readable under direct 12 PM Enugu Sun" }
-      ]
-    },
-    {
-      category: "PLATFORM",
-      items: [
-        { label: "OS", value: "Android 14 / HIOS 14 (Optimized for Local Battery Survival)" },
-        { label: "Chipset", value: processor },
-        { label: "CPU", value: "Octa-core (1x3.1 GHz Cortex-A78 & 3x3.0 GHz & 4x2.0 GHz)" },
-        { label: "GPU", value: "Mali-G610 MC6 Hardware Accelerated" }
-      ]
-    },
-    {
-      category: "MEMORY",
-      items: [
-        { label: "Card slot", value: "Unspecified / Cloud Backup Supported" },
-        { label: "Internal", value: ramStorage },
-        { label: "Bus Speed", value: "UFS 3.1 (~2,100 MB/s Sequential Read)" }
-      ]
-    },
-    {
-      category: "MAIN CAMERA",
-      items: [
-        { label: "Modules", value: cameras },
-        { label: "Features", value: "Ring-LED flash, HDR, Panorama, Sony IMX890 Sensor" },
-        { label: "Video", value: "4K@30/60fps, 1080p@30/60/120fps, gyro-EIS, OIS" }
-      ]
-    },
-    {
-      category: "SELFIE CAMERA",
-      items: [
-        { label: "Single", value: "50 MP, f/2.5, 24mm (wide), Eye AutoFocus" },
-        { label: "Features", value: "Dual LED Dual Color Flash" },
-        { label: "Video", value: "4K@30/60fps, 1080p@30/60fps" }
-      ]
-    },
-    {
-      category: "SOUND",
-      items: [
-        { label: "Loudspeaker", value: "Yes, with Stereo Loudspeakers (Dolby Atmos Tuned)" },
-        { label: "3.5mm jack", value: "No (Type-C Audio & High-Res Wireless Certified)" },
-        { label: "Noise Cancellation", value: "-30dB ANC Active — Drowns out Keke Engine Roar" }
-      ]
-    },
-    {
-      category: "COMMS",
-      items: [
-        { label: "WLAN", value: "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct" },
-        { label: "Bluetooth", value: "5.3, A2DP, LE Low Latency" },
-        { label: "Positioning", value: "GPS, GLONASS, GALILEO, BDS" },
-        { label: "NFC", value: "Yes (360° Tap to Pay Compatible)" },
-        { label: "USB", value: "USB Type-C 2.0, OTG" }
-      ]
-    },
-    {
-      category: "BATTERY",
-      items: [
-        { label: "Type", value: "5000 mAh, non-removable Li-Po" },
-        { label: "Charging", value: batteryCharging },
-        { label: "Generator Test", value: "Passed: 15-minute emergency burst yields +45% charge" }
-      ]
-    },
-    {
-      category: "MISC",
-      items: [
-        { label: "Colors", value: "Alps Snowy Silver, Basalt Dark Black, Sahara Brown" },
-        { label: "Local Verdict", value: gadget.verdict || "Highly Recommended Local Purchase" }
-      ]
+  // Helper to build category-accurate specs
+  const getCategorySpecSections = () => {
+    if (category === 'Power Banks') {
+      return [
+        {
+          category: "BATTERY CAPACITY",
+          items: [
+            { label: "Nominal Capacity", value: specs.batteryCharging || "27,000 mAh High-Density Lithium-Polymer" },
+            { label: "Rated Energy", value: "99.9Wh (Airplane Carry-on Approved)" },
+            { label: "Cell Efficiency", value: ">85% Conversion Energy Efficiency" }
+          ]
+        },
+        {
+          category: "INPUT PORTS",
+          items: [
+            { label: "Recharge Port", value: "Type-C Fast Power Delivery Input" },
+            { label: "Input Voltage", value: "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/3.25A (Up to 65W/100W)" },
+            { label: "Recharge Speed", value: "0 to 100% full charge in ~1.5 to 2.5 hours" }
+          ]
+        },
+        {
+          category: "OUTPUT PORTS",
+          items: [
+            { label: "Type-C Output", value: "Power Delivery (PD 3.0 / QC 4.0+) 65W/100W Fast Charge" },
+            { label: "USB-A Output 1", value: "22.5W Super Charge (5V/4.5A, 9V/2A, 12V/1.5A)" },
+            { label: "USB-A Output 2", value: "18W Quick Charge 3.0" },
+            { label: "Multi-Device", value: "Charges up to 3 to 4 devices simultaneously" }
+          ]
+        },
+        {
+          category: "COMPATIBILITY",
+          items: [
+            { label: "Laptops & MacBooks", value: "Supports Type-C PD Laptop Charging (MacBook Pro, Dell, HP, ThinkPad)" },
+            { label: "Smartphones", value: "Fast charges iPhones, Samsung S-Series, Tecno, Infinix, Xiaomi" },
+            { label: "MiFi & Accessories", value: "Low-current trickle charging mode for MiFi routers & earbuds" }
+          ]
+        },
+        {
+          category: "BUILD & SAFETY",
+          items: [
+            { label: "Safety Circuitry", value: "MultiProtect: Overcharge, Overcurrent, Short-Circuit & Thermal Protection" },
+            { label: "Chassis Material", value: specs.buildRating || "Fire-retardant Polycarbonate + Aluminum Alloy Frame" },
+            { label: "LED Display", value: "Digital Percentage Power Indicator" }
+          ]
+        }
+      ];
     }
-  ];
+
+    if (category === 'Earbuds & Audio') {
+      return [
+        {
+          category: "AUDIO & DRIVERS",
+          items: [
+            { label: "Driver Size", value: "10mm to 12.4mm Dynamic Bass Boost Drivers" },
+            { label: "Frequency Range", value: "20 Hz – 20,000 Hz" },
+            { label: "Audio Tuning", value: specs.cameras || "High-Fidelity Stereo with Deep Bass Architecture" }
+          ]
+        },
+        {
+          category: "NOISE CANCELLATION",
+          items: [
+            { label: "Active Cancellation", value: "-30dB to -45dB Hybrid Active Noise Cancellation (ANC)" },
+            { label: "Transparency Mode", value: "Dual Mics Ambient Passthrough Mode" },
+            { label: "Call Noise Reduction", value: "Quad-Mic Environmental Noise Cancellation (ENC) for clear voice" }
+          ]
+        },
+        {
+          category: "BATTERY & CASE",
+          items: [
+            { label: "Earbud Battery", value: specs.batteryCharging || "Up to 7 to 8 hours playback per single charge" },
+            { label: "Case Total Playtime", value: "Up to 30 to 36 hours combined battery life" },
+            { label: "Fast Charging", value: "10 minutes case charge yields 2 hours playtime" }
+          ]
+        },
+        {
+          category: "CONNECTIVITY",
+          items: [
+            { label: "Bluetooth", value: "Bluetooth 5.3 / 5.4 Low Energy" },
+            { label: "Audio Codecs", value: "AAC, SBC, LDAC High-Res Wireless Audio" },
+            { label: "Latency", value: "~45ms Ultra-Low Latency Gaming Mode" }
+          ]
+        },
+        {
+          category: "BUILD & INGRESS",
+          items: [
+            { label: "Water Resistance", value: specs.buildRating || "IPX5 Sweat & Rain Splash Resistant" },
+            { label: "Touch Controls", value: "Capacitive Touch (Play/Pause, ANC Toggle, Volume Control)" }
+          ]
+        }
+      ];
+    }
+
+    if (category === 'Internet & Networking') {
+      return [
+        {
+          category: "NETWORK & SPEEDS",
+          items: [
+            { label: "Connection Tech", value: specs.processor || "5G NR / 4G LTE Cat 19 & High-Speed Satellite Link" },
+            { label: "Download Speed", value: "Up to 1.2 Gbps Download / 200 Mbps Upload" },
+            { label: "Bands Supported", value: "Universal 5G/4G Bands (MTN, Airtel, Glo, 9mobile Compatible)" }
+          ]
+        },
+        {
+          category: "WIFI COVERAGE",
+          items: [
+            { label: "Wi-Fi Standard", value: "Wi-Fi 6 (802.11ax) Dual-Band 2.4GHz & 5GHz" },
+            { label: "Connected Devices", value: "Connects up to 32 to 128 simultaneous devices" },
+            { label: "Antenna Array", value: specs.display || "High-Gain Directional Antennas with Beamforming" }
+          ]
+        },
+        {
+          category: "PORTS & POWER",
+          items: [
+            { label: "Ethernet Ports", value: "Gigabit LAN/WAN RJ45 Ports" },
+            { label: "Power Source", value: specs.batteryCharging || "DC Adapter Power / Built-in Emergency Battery Option" },
+            { label: "SIM Slot", value: "Nano-SIM / eSIM Direct Connectivity" }
+          ]
+        },
+        {
+          category: "BUILD & PROTECTION",
+          items: [
+            { label: "Protection", value: specs.buildRating || "Weather-resistant IP54 Indoor/Outdoor Chassis" }
+          ]
+        }
+      ];
+    }
+
+    if (category === 'Smart Tech & Accessories') {
+      return [
+        {
+          category: "DISPLAY & SCREEN",
+          items: [
+            { label: "Screen Type", value: specs.display || "1.43-inch HD AMOLED Color Touch Screen" },
+            { label: "Resolution", value: "466 x 466 pixels, 326 ppi" },
+            { label: "Peak Brightness", value: "600 nits Outdoor Readable, Always-On Display Mode" }
+          ]
+        },
+        {
+          category: "SENSORS & HEALTH",
+          items: [
+            { label: "Health Tracking", value: "24/7 Heart Rate Monitor, SpO2 Blood Oxygen, Sleep & Stress Monitor" },
+            { label: "Sports Modes", value: "100+ Workout & Fitness Tracking Modes" }
+          ]
+        },
+        {
+          category: "CONNECTIVITY & BATTERY",
+          items: [
+            { label: "Bluetooth Calling", value: "Bluetooth 5.3 with Built-in Speaker & Mic" },
+            { label: "Battery Life", value: specs.batteryCharging || "Up to 7 to 10 days typical usage on single charge" },
+            { label: "Water Resistance", value: specs.buildRating || "IP68 / 5ATM Water Resistant (Swimming Approved)" }
+          ]
+        }
+      ];
+    }
+
+    // Default / Smartphones Category
+    return [
+      {
+        category: "NETWORK",
+        items: [
+          { label: "Technology", value: "GSM / HSPA / LTE / 5G (Sub6 & mmWave)" },
+          { label: "5G Bands", value: "n1, n3, n5, n7, n8, n28, n38, n40, n41, n77, n78 SA/NSA (Nigeria Compatible)" },
+          { label: "Speed", value: "HSPA, LTE-A, 5G (up to 3.7 Gbps DL)" }
+        ]
+      },
+      {
+        category: "LAUNCH",
+        items: [
+          { label: "Announced", value: "Official Channel Review Release" },
+          { label: "Status", value: "Available. Released & Stocked Nationwide in Nigeria" }
+        ]
+      },
+      {
+        category: "BODY",
+        items: [
+          { label: "Dimensions", value: "162.7 x 75.9 x 7.8 mm (6.41 x 2.99 x 0.31 in)" },
+          { label: "Weight", value: "198 g / 6.98 oz" },
+          { label: "Build", value: specs.buildRating || "Gorilla Glass Front, Aluminum Frame" },
+          { label: "SIM", value: "Dual SIM (Nano-SIM, dual stand-by)" }
+        ]
+      },
+      {
+        category: "DISPLAY",
+        items: [
+          { label: "Type", value: specs.display || "LTPO AMOLED, 1B colors, 120Hz" },
+          { label: "Size", value: "6.77 inches (~89.5% screen-to-body ratio)" },
+          { label: "Resolution", value: "1.5K (1264 x 2780 pixels), 19.5:9 ratio (~450 ppi density)" },
+          { label: "Protection", value: "Corning Gorilla Glass Victus, Oleophobic Coating" }
+        ]
+      },
+      {
+        category: "PLATFORM",
+        items: [
+          { label: "OS", value: "Android 14 / HIOS 14 (Optimized for Local Battery Survival)" },
+          { label: "Chipset", value: specs.processor || "MediaTek Dimensity / Qualcomm Snapdragon" },
+          { label: "CPU", value: "Octa-core High Efficiency Silicon" }
+        ]
+      },
+      {
+        category: "MEMORY",
+        items: [
+          { label: "Internal Storage", value: specs.ramStorage || "256GB / 512GB UFS 3.1" },
+          { label: "RAM", value: "12GB LPDDR5X + Virtual RAM Expansion" }
+        ]
+      },
+      {
+        category: "CAMERAS",
+        items: [
+          { label: "Main Camera", value: specs.cameras || "50 MP Triple Camera with OIS & 4K Recording" },
+          { label: "Selfie Camera", value: "50 MP Eye AutoFocus Front Camera" }
+        ]
+      },
+      {
+        category: "BATTERY & CHARGING",
+        items: [
+          { label: "Capacity", value: "5000 mAh Non-removable Battery" },
+          { label: "Charging Speed", value: specs.batteryCharging || "100W Ultra Fast Charging" }
+        ]
+      }
+    ];
+  };
+
+  const sections = getCategorySpecSections();
 
   return (
     <div className="card-neo" style={{ backgroundColor: '#FFFFFF', border: 'var(--border-subtle)', marginBottom: '32px', padding: '28px' }}>
       
       {/* Header Bar */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginBottom: '20px', borderBottom: 'var(--border-subtle)', paddingBottom: '16px' }}>
+      <div style={{ marginBottom: '20px', borderBottom: 'var(--border-subtle)', paddingBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <span style={{ fontSize: '1.8rem' }}>📱</span>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <h3 style={{ fontSize: '1.4rem', color: '#1A1A1A', fontFamily: 'var(--font-heading)' }}>
-                {gadgetTitle} Detailed Specifications
+                Nerd Zone // {gadgetTitle} Specifications
               </h3>
-              <span className="badge-neo badge-neo-lime">GSMARENA MATRIX</span>
+              <span className="badge-neo badge-neo-lime">VERIFIED SPECS</span>
             </div>
-            <p style={{ fontSize: '0.86rem', color: '#666666' }}>
-              Comprehensive technical specification sheet & localized Nigerian field test metrics.
+            <p style={{ fontSize: '0.86rem', color: '#666666', marginTop: '2px' }}>
+              Official technical specification sheet tailored for {category.toLowerCase()}.
             </p>
           </div>
         </div>
-
-        {/* View Switcher Tabs */}
-        <div style={{ display: 'flex', gap: '6px', background: 'var(--bg-card-alt)', padding: '4px', borderRadius: 'var(--radius-pill)', border: 'var(--border-subtle)' }}>
-          <button 
-            onClick={() => setActiveTab('gsmarena')}
-            style={{ 
-              background: activeTab === 'gsmarena' ? '#E05638' : 'transparent', 
-              color: activeTab === 'gsmarena' ? '#FFF' : '#666',
-              border: 'none',
-              borderRadius: 'var(--radius-pill)',
-              padding: '6px 16px',
-              fontSize: '0.82rem',
-              fontFamily: 'var(--font-heading)',
-              fontWeight: '800',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease'
-            }}
-          >
-            📋 GSMArena Spec Sheet
-          </button>
-          <button 
-            onClick={() => setActiveTab('telemetry')}
-            style={{ 
-              background: activeTab === 'telemetry' ? '#008751' : 'transparent', 
-              color: activeTab === 'telemetry' ? '#FFF' : '#666',
-              border: 'none',
-              borderRadius: 'var(--radius-pill)',
-              padding: '6px 16px',
-              fontSize: '0.82rem',
-              fontFamily: 'var(--font-heading)',
-              fontWeight: '800',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease'
-            }}
-          >
-            📊 Telemetry
-          </button>
-          <button 
-            onClick={() => setActiveTab('terminal')}
-            style={{ 
-              background: activeTab === 'terminal' ? '#1A1A1A' : 'transparent', 
-              color: activeTab === 'terminal' ? '#00FF66' : '#666',
-              border: 'none',
-              borderRadius: 'var(--radius-pill)',
-              padding: '6px 16px',
-              fontSize: '0.82rem',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: '800',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease'
-            }}
-          >
-            💻 CLI Logs
-          </button>
-          <button 
-            onClick={() => setActiveTab('json')}
-            style={{ 
-              background: activeTab === 'json' ? '#7C3AED' : 'transparent', 
-              color: activeTab === 'json' ? '#FFF' : '#666',
-              border: 'none',
-              borderRadius: 'var(--radius-pill)',
-              padding: '6px 16px',
-              fontSize: '0.82rem',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: '800',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease'
-            }}
-          >
-            {'{ }'} Raw JSON
-          </button>
-        </div>
       </div>
 
-      {/* TAB 1: GSMARENA DETAILED SPECIFICATION MATRIX */}
-      {activeTab === 'gsmarena' && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: '#E2DDD5', borderRadius: '12px', overflow: 'hidden', border: 'var(--border-subtle)' }}>
-          {gsmArenaSections.map((sec, secIdx) => (
-            <div key={secIdx} style={{ display: 'grid', gridTemplateColumns: '150px 1fr', backgroundColor: '#FFFFFF' }}>
-              
-              {/* Category Column (Red/Terracotta GSMArena Accent Header) */}
-              <div style={{ 
-                backgroundColor: '#FAF7F2', 
-                padding: '16px', 
-                fontWeight: '900', 
-                fontSize: '0.85rem', 
-                color: '#E05638', 
-                fontFamily: 'var(--font-heading)',
-                letterSpacing: '0.04em',
-                borderRight: 'var(--border-subtle)',
-                display: 'flex',
-                alignItems: 'flex-start'
-              }}>
-                {sec.category}
-              </div>
+      {/* Clean Structured Hardware Specification Table */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: '#E2DDD5', borderRadius: '12px', overflow: 'hidden', border: 'var(--border-subtle)' }}>
+        {sections.map((sec, secIdx) => (
+          <div key={secIdx} style={{ display: 'grid', gridTemplateColumns: '170px 1fr', backgroundColor: '#FFFFFF' }}>
+            
+            {/* Category Column */}
+            <div style={{ 
+              backgroundColor: '#FAF7F2', 
+              padding: '16px', 
+              fontWeight: '900', 
+              fontSize: '0.85rem', 
+              color: '#E05638', 
+              fontFamily: 'var(--font-heading)',
+              letterSpacing: '0.04em',
+              borderRight: 'var(--border-subtle)',
+              display: 'flex',
+              alignItems: 'flex-start'
+            }}>
+              {sec.category}
+            </div>
 
-              {/* Items Column */}
-              <div style={{ padding: '0 16px' }}>
-                {sec.items.map((item, itemIdx) => (
-                  <div key={itemIdx} style={{ 
-                    display: 'grid', 
-                    gridTemplateColumns: '140px 1fr', 
-                    padding: '12px 0', 
-                    borderBottom: itemIdx < sec.items.length - 1 ? '1px solid #F0ECE4' : 'none',
-                    fontSize: '0.9rem',
-                    alignItems: 'baseline'
-                  }}>
-                    <span style={{ fontWeight: '700', color: '#666666', fontSize: '0.85rem' }}>
-                      {item.label}
-                    </span>
-                    <span style={{ color: '#1A1A1A', fontWeight: '500', lineHeight: 1.5 }}>
-                      {item.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            {/* Items Column */}
+            <div style={{ padding: '0 16px' }}>
+              {sec.items.map((item, itemIdx) => (
+                <div key={itemIdx} style={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: '150px 1fr', 
+                  padding: '12px 0', 
+                  borderBottom: itemIdx < sec.items.length - 1 ? '1px solid #F0ECE4' : 'none',
+                  fontSize: '0.9rem',
+                  alignItems: 'baseline'
+                }}>
+                  <span style={{ fontWeight: '700', color: '#666666', fontSize: '0.85rem' }}>
+                    {item.label}
+                  </span>
+                  <span style={{ color: '#1A1A1A', fontWeight: '500', lineHeight: 1.5 }}>
+                    {item.value}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* TAB 2: TELEMETRY GAUGES */}
-      {activeTab === 'telemetry' && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', marginTop: '16px' }}>
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-blue)', marginBottom: '4px' }}>
-              [01] DISPLAY & LUMINANCE PEAK
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {display}
-            </div>
-            <div style={{ fontSize: '0.78rem', color: '#666', fontFamily: 'var(--font-mono)' }}>
-              ⚡ Peak Brightness: 1,400 nits (Sunlight Threshold Passed)
-            </div>
           </div>
-
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-green)', marginBottom: '4px' }}>
-              [02] SILICON ARCHITECTURE & PROCESS
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {processor}
-            </div>
-            <div style={{ fontSize: '0.78rem', color: '#666', fontFamily: 'var(--font-mono)' }}>
-              🧠 Octa-Core TSMC 4nm | Max Clock: 3.1 GHz
-            </div>
-          </div>
-
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-purple)', marginBottom: '4px' }}>
-              [03] BATTERY ENERGY DENSITY & FAST CHARGE
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {batteryCharging}
-            </div>
-            <div style={{ fontSize: '0.78rem', color: '#666', fontFamily: 'var(--font-mono)' }}>
-              🔋 Generator Compatibility: Passed (15-min emergency burst)
-            </div>
-          </div>
-
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: '#B45309', marginBottom: '4px' }}>
-              [04] RAM & STORAGE BUS
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {ramStorage}
-            </div>
-            <div style={{ fontSize: '0.78rem', color: '#666', fontFamily: 'var(--font-mono)' }}>
-              💾 Read Speed: ~2,100 MB/s (UFS 3.1)
-            </div>
-          </div>
-
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-orange)', marginBottom: '4px' }}>
-              [05] OPTICAL SENSORS & STABILIZATION
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {cameras}
-            </div>
-          </div>
-
-          <div style={{ background: 'var(--bg-card-alt)', padding: '16px', borderRadius: '12px', border: 'var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-blue)', marginBottom: '4px' }}>
-              [06] INGRESS PROTECTION & CHASSIS
-            </div>
-            <div style={{ fontSize: '1.02rem', fontWeight: '800', color: '#1A1A1A', marginBottom: '8px' }}>
-              {buildRating}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* TAB 3: TERMINAL CLI LOGS */}
-      {activeTab === 'terminal' && (
-        <div className="nerd-terminal" style={{ background: '#16181D', border: '1px solid #2A2D34', borderRadius: '12px' }}>
-          <div className="terminal-header-bar">
-            <div className="terminal-dots">
-              <div className="terminal-dot dot-red"></div>
-              <div className="terminal-dot dot-yellow"></div>
-              <div className="terminal-dot dot-green"></div>
-            </div>
-            <span style={{ fontSize: '0.75rem', color: '#888' }}>niftech@gadget-life: ~/hardware-inspect</span>
-          </div>
-
-          <div className="terminal-body" style={{ color: '#E2E8F0', padding: '18px', fontFamily: 'var(--font-mono)' }}>
-            <div className="terminal-prompt-line">
-              <span style={{ color: '#00FF66' }}>niftech@gadget-life:~$</span>
-              <span style={{ color: '#FFF', marginLeft: '6px' }}>./inspect_device --id="{gadgetId}" --verbose</span>
-            </div>
-
-            <span style={{ color: '#888' }}>[INFO] Fetching hardware register map for {gadgetTitle}...</span>{'\n'}
-            <span style={{ color: '#00FF66' }}>[SUCCESS] Connected to hardware HAL interface.</span>{'\n'}
-            {'\n'}
-            <span style={{ color: '#FBBF24' }}>--- CHIPSET SPECS ---</span>{'\n'}
-            Processor  : {processor}{'\n'}
-            Memory RAM : {ramStorage}{'\n'}
-            Display    : {display}{'\n'}
-            Battery    : {batteryCharging}{'\n'}
-            Optics     : {cameras}{'\n'}
-            Protection : {buildRating}{'\n'}
-            {'\n'}
-            <span style={{ color: '#38BDF8' }}>--- NIGERIAN FIELD TELEMETRY ---</span>{'\n'}
-            Sunlight Readability Index : 9.4/10 (Passes 100,000 Lux Enugu Ambient){'\n'}
-            Generator Fast Charge Test : 15 min burst yields +45% charge{'\n'}
-            Keke Engine Noise Rejection : -30dB ANC Active{'\n'}
-            Concrete Drop Impact Rating : Survived 3x pavement drops{'\n'}
-            {'\n'}
-            <div className="terminal-prompt-line">
-              <span style={{ color: '#00FF66' }}>niftech@gadget-life:~$</span>
-              <span className="cursor-blink"></span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* TAB 4: RAW JSON FORMAT */}
-      {activeTab === 'json' && (
-        <div className="nerd-terminal" style={{ background: '#16181D', border: '1px solid #7C3AED', borderRadius: '12px' }}>
-          <div className="terminal-header-bar" style={{ background: '#130C1C' }}>
-            <span style={{ fontSize: '0.75rem', color: '#C084FC', fontFamily: 'var(--font-mono)' }}>specifications.json</span>
-          </div>
-          <div className="terminal-body" style={{ color: '#E2E8F0', fontSize: '0.84rem', padding: '18px', fontFamily: 'var(--font-mono)' }}>
-{JSON.stringify({
-  device_id: gadgetId,
-  device_name: gadgetTitle,
-  brand: brand,
-  category: gadget.category || 'N/A',
-  verdict: gadget.verdict || 'N/A',
-  overall_score: gadget.score || 0,
-  gsmarena_specifications: gsmArenaSections,
-  quick_facts: gadget.quickFacts || {},
-  lifecycle_matrix: gadget.matrixScores || {}
-}, null, 2)}
-          </div>
-        </div>
-      )}
+        ))}
+      </div>
 
     </div>
   );
