@@ -35,6 +35,12 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
           return;
         }
 
+        if (formData.password.length < 6) {
+          setErrorMsg('Password must be at least 6 characters long.');
+          setLoading(false);
+          return;
+        }
+
         const res = await signUpUser({
           email: formData.email,
           password: formData.password,
@@ -43,22 +49,27 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
           location: formData.location
         });
 
-        if (res.success) {
-          // Save to registered users list in local storage for admin viewing
-          try {
-            const existing = JSON.parse(localStorage.getItem('gadget_life_registered_users_list') || '[]');
-            const updated = [res.user, ...existing.filter(u => u.email !== res.user.email)];
-            localStorage.setItem('gadget_life_registered_users_list', JSON.stringify(updated));
-          } catch (err) {}
-
-          setSuccessMsg('Account created successfully!');
-          setTimeout(() => {
-            onLoginSuccess(res.user);
-          }, 800);
+        if (!res.success) {
+          setErrorMsg(res.error || 'Account creation failed. Please try again.');
+          setLoading(false);
+          return;
         }
+
+        // Save to registered users list in local storage for admin viewing & password verification
+        try {
+          const existing = JSON.parse(localStorage.getItem('gadget_life_registered_users_list') || '[]');
+          const updated = [{ ...res.user, password: formData.password }, ...existing.filter(u => u.email !== res.user.email)];
+          localStorage.setItem('gadget_life_registered_users_list', JSON.stringify(updated));
+        } catch (err) {}
+
+        setSuccessMsg('Account created successfully!');
+        setTimeout(() => {
+          onLoginSuccess(res.user);
+        }, 800);
+
       } else {
         if (!formData.email || !formData.password) {
-          setErrorMsg('Please enter your email and password.');
+          setErrorMsg('Please enter both your email address and password.');
           setLoading(false);
           return;
         }
@@ -68,12 +79,16 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
           password: formData.password
         });
 
-        if (res.success) {
-          setSuccessMsg('Signed in successfully!');
-          setTimeout(() => {
-            onLoginSuccess(res.user);
-          }, 800);
+        if (!res.success) {
+          setErrorMsg(res.error || 'Incorrect email or password. Please check your credentials.');
+          setLoading(false);
+          return;
         }
+
+        setSuccessMsg('Signed in successfully!');
+        setTimeout(() => {
+          onLoginSuccess(res.user);
+        }, 800);
       }
     } catch (err) {
       setErrorMsg(err.message || 'An error occurred during authentication.');
@@ -155,13 +170,13 @@ export default function AuthModal({ onClose, onLoginSuccess }) {
         </div>
 
         {errorMsg && (
-          <div style={{ backgroundColor: '#FEE2E2', color: '#B91C1C', padding: '10px 14px', borderRadius: '12px', fontSize: '0.84rem', fontWeight: '700', marginBottom: '16px' }}>
+          <div style={{ backgroundColor: '#FEE2E2', color: '#B91C1C', padding: '12px 16px', borderRadius: '12px', fontSize: '0.86rem', fontWeight: '800', marginBottom: '16px', border: '1px solid #FECACA' }}>
             ⚠️ {errorMsg}
           </div>
         )}
 
         {successMsg && (
-          <div style={{ backgroundColor: '#DCFCE7', color: '#15803D', padding: '10px 14px', borderRadius: '12px', fontSize: '0.84rem', fontWeight: '700', marginBottom: '16px' }}>
+          <div style={{ backgroundColor: '#DCFCE7', color: '#15803D', padding: '12px 16px', borderRadius: '12px', fontSize: '0.86rem', fontWeight: '800', marginBottom: '16px', border: '1px solid #B8E4CD' }}>
             ✅ {successMsg}
           </div>
         )}

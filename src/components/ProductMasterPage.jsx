@@ -14,7 +14,178 @@ export default function ProductMasterPage({
 }) {
   const [showScoreMatrix, setShowScoreMatrix] = useState(true);
 
-  // Key Features extracted dynamically
+  const category = gadget.category || 'Smartphones';
+  const nameLower = gadget.name ? gadget.name.toLowerCase() : '';
+
+  // Helper to build product-matched everyday layman usability questions & answers
+  const getLaymanQuestions = () => {
+    if (category === 'Power Banks') {
+      return [
+        {
+          icon: "💡",
+          title: "LED Screen & Daylight Readability",
+          question: "Can you see the digital battery percentage indicator clearly outdoors in daylight?",
+          answer: gadget.quickFacts?.visibility || "High-contrast LED digital display screen is clear under direct outdoor daylight.",
+          color: "#B45309",
+          bg: "#FFFBEB",
+          borderColor: "#D97706"
+        },
+        {
+          icon: "🔋",
+          title: "Blackout Survival & Phone Charges",
+          question: "How many full phone charges or blackout days will this power bank provide?",
+          answer: gadget.quickFacts?.endurance || "Provides ~5 to 7 full smartphone recharges across 3+ days of power blackout.",
+          color: "var(--accent-green)",
+          bg: "#ECFDF5",
+          borderColor: "var(--accent-green)"
+        },
+        {
+          icon: "⚡",
+          title: "Generator Fast-Charging Speed",
+          question: "How much energy does 15 minutes of generator run time add to this power bank?",
+          answer: "15-minute emergency generator burst adds ~2,000mAh to 3,000mAh of fast emergency power.",
+          color: "var(--accent-purple)",
+          bg: "#F3E8FF",
+          borderColor: "var(--accent-purple)"
+        },
+        {
+          icon: "🛡️",
+          title: "Desk Drop & Chassis Durability",
+          question: "If it falls from a table onto hard tiled floor or pavement, will the casing crack?",
+          answer: gadget.quickFacts?.toughness || "Fire-retardant ABS+PC casing survived 3x pavement drop impact tests.",
+          color: "var(--accent-orange)",
+          bg: "#FFF1F2",
+          borderColor: "var(--accent-orange)"
+        }
+      ];
+    }
+
+    if (category === 'Earbuds & Audio') {
+      return [
+        {
+          icon: "🔊",
+          title: "Generator & Street Noise Drowning",
+          question: "Does Active Noise Cancellation (ANC) drown out noisy generator engines & bus traffic?",
+          answer: gadget.quickFacts?.audio || "Hybrid -30dB ANC effectively cuts out generator hum and heavy street traffic noise.",
+          color: "var(--accent-purple)",
+          bg: "#F3E8FF",
+          borderColor: "var(--accent-purple)"
+        },
+        {
+          icon: "🔋",
+          title: "Battery Endurance on Travel Trips",
+          question: "How long will a single charge last on a long travel trip or 24-hour blackout?",
+          answer: gadget.quickFacts?.endurance || "Provides up to 7.5 hours earbud playback + 28 hours charging case (35.5h total).",
+          color: "var(--accent-green)",
+          bg: "#ECFDF5",
+          borderColor: "var(--accent-green)"
+        },
+        {
+          icon: "🌧️",
+          title: "Sweat & Rain Splash Protection",
+          question: "Will heavy sweat during workouts or accidental rain ruin the earbuds?",
+          answer: "IPX5 sweatproof & rain splash resistance protects against intense workouts and rain.",
+          color: "#0284C7",
+          bg: "#E0F2FE",
+          borderColor: "#0284C7"
+        },
+        {
+          icon: "🛡️",
+          title: "Case Drop & Pocket Durability",
+          question: "If the charging case slips out of your pocket onto concrete, will it survive?",
+          answer: gadget.quickFacts?.toughness || "Reinforced sliding magnetic case survived pavement drop impact tests.",
+          color: "var(--accent-orange)",
+          bg: "#FFF1F2",
+          borderColor: "var(--accent-orange)"
+        }
+      ];
+    }
+
+    if (category === 'Smart Tech & Accessories') {
+      return [
+        {
+          icon: "⚙️",
+          title: "Daily Utility & Setup",
+          question: "How easy is it to plug in, pair, or operate out of the box?",
+          answer: "Zero-friction plug and play operation with instant Bluetooth / USB pairing.",
+          color: "#B45309",
+          bg: "#FFFBEB",
+          borderColor: "#D97706"
+        },
+        {
+          icon: "🔋",
+          title: "Energy Consumption & Battery",
+          question: "Does it drain power quickly, and how easy is it to recharge during light cuts?",
+          answer: gadget.quickFacts?.endurance || "High energy efficiency with fast Type-C / DC power input.",
+          color: "var(--accent-green)",
+          bg: "#ECFDF5",
+          borderColor: "var(--accent-green)"
+        },
+        {
+          icon: "🔊",
+          title: "Operating Sound & Noise Level",
+          question: "Is it quiet enough to use in a home office, bedroom, or quiet space?",
+          answer: gadget.quickFacts?.audio || "Low acoustic motor noise operating below 45dB threshold.",
+          color: "var(--accent-purple)",
+          bg: "#F3E8FF",
+          borderColor: "var(--accent-purple)"
+        },
+        {
+          icon: "🛡️",
+          title: "Build Quality & Heat Resilience",
+          question: "Can it withstand heat and daily physical handling without degrading?",
+          answer: gadget.quickFacts?.toughness || "Durable heat-resistant housing with multi-layer circuit protection.",
+          color: "var(--accent-orange)",
+          bg: "#FFF1F2",
+          borderColor: "var(--accent-orange)"
+        }
+      ];
+    }
+
+    // Default / Smartphones Category
+    return [
+      {
+        icon: "☀️",
+        title: "Sunlight Readability",
+        question: "Can you read WhatsApp messages under hot 12 PM sun without blocking screen with your hand?",
+        answer: gadget.quickFacts?.visibility || "Super AMOLED 800+ nits display reads clearly under direct afternoon sun.",
+        color: "#B45309",
+        bg: "#FFFBEB",
+        borderColor: "#D97706"
+      },
+      {
+        icon: "🔋",
+        title: "Battery & Generator Fast Charging",
+        question: "Will 15 minutes of generator run time charge enough battery for emergency calls?",
+        answer: gadget.quickFacts?.endurance || "25W/100W fast charge yields +45% battery in 15 minutes of generator run time.",
+        color: "var(--accent-green)",
+        bg: "#ECFDF5",
+        borderColor: "var(--accent-green)"
+      },
+      {
+        icon: "🔊",
+        title: "Traffic Noise & Call Clarity",
+        question: "Can you hear calls clearly when standing beside a noisy commercial street or bus?",
+        answer: gadget.quickFacts?.audio || "Dual-mic noise cancellation filters background traffic noise during calls.",
+        color: "var(--accent-purple)",
+        bg: "#F3E8FF",
+        borderColor: "var(--accent-purple)"
+      },
+      {
+        icon: "🛡️",
+        title: "Concrete Tile Drop Durability",
+        question: "If it falls from your hand or table onto hard tiled floor, will the screen shatter?",
+        answer: gadget.quickFacts?.toughness || "Gorilla Glass Victus screen withstands pavement drops up to 1.5 meters.",
+        color: "var(--accent-orange)",
+        bg: "#FFF1F2",
+        borderColor: "var(--accent-orange)"
+      }
+    ];
+  };
+
+  const laymanQuestions = getLaymanQuestions();
+
+  // Key Standout Features extracted dynamically
   const keyFeatures = [
     `⚡ ${gadget.quickFacts?.endurance || 'High-capacity battery with fast generator charging support'}`,
     `☀️ ${gadget.quickFacts?.visibility || 'Outdoor readable display under direct sunlight'}`,
@@ -84,7 +255,7 @@ export default function ProductMasterPage({
                   onClick={() => setShowVideoModal(true)}
                   style={{ fontSize: '0.95rem', padding: '12px 24px' }}
                 >
-                  ▶ Watch Video Review
+                  ▶ Watch Review on YouTube
                 </button>
               </div>
             </div>
@@ -162,57 +333,29 @@ export default function ProductMasterPage({
         </div>
       </div>
 
-      {/* Quick Facts Section: Simple Layman Everyday Examples */}
+      {/* Quick Facts Section: Simple Product-Matched Layman Everyday Questions */}
       <div style={{ marginBottom: '32px' }}>
         <div style={{ marginBottom: '16px' }}>
           <h2 style={{ fontSize: '1.4rem', color: '#1A1A1A', marginBottom: '4px' }}>
-            ⚡ Everyday Usability: Real-Life Nigerian Questions
+            ⚡ Everyday Usability: Product-Matched Layman Questions
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666' }}>
-            Simple, relatable answers to everyday questions before buying.
+            Simple, relatable answers to everyday questions tailored specifically for {gadget.name}.
           </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
-          <div className="card-neo" style={{ borderLeft: '4px solid #D97706', backgroundColor: '#FFFBEB' }}>
-            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: '#B45309' }}>☀️ Sunlight Readability</h3>
-            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
-              Can you see messages under 12 PM afternoon sun without cupping your hand?
-            </p>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
-              {gadget.quickFacts.visibility}
-            </p>
-          </div>
-
-          <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-green)', backgroundColor: '#ECFDF5' }}>
-            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-green)' }}>🔋 Battery & Generator Charging</h3>
-            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
-              Will it survive a 24-hour blackout, and how fast does it charge on a generator?
-            </p>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
-              {gadget.quickFacts.endurance}
-            </p>
-          </div>
-
-          <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-purple)', backgroundColor: '#F3E8FF' }}>
-            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-purple)' }}>🔊 Sound & Noise Cancellation</h3>
-            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
-              Can you hear calls clearly when standing near heavy street traffic or a generator?
-            </p>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
-              {gadget.quickFacts.audio}
-            </p>
-          </div>
-
-          <div className="card-neo" style={{ borderLeft: '4px solid var(--accent-orange)', backgroundColor: '#FFF1F2' }}>
-            <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: 'var(--accent-orange)' }}>🛡️ Drop & Impact Durability</h3>
-            <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
-              If it falls from your hand, table, or pocket onto hard tiled floor, will it shatter?
-            </p>
-            <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
-              {gadget.quickFacts.toughness}
-            </p>
-          </div>
+          {laymanQuestions.map((q, idx) => (
+            <div key={idx} className="card-neo" style={{ borderLeft: `4px solid ${q.borderColor}`, backgroundColor: q.bg }}>
+              <h3 style={{ fontSize: '1rem', marginBottom: '6px', color: q.color }}>{q.icon} {q.title}</h3>
+              <p style={{ fontSize: '0.78rem', color: '#666', fontWeight: '600', marginBottom: '6px' }}>
+                {q.question}
+              </p>
+              <p style={{ fontSize: '0.92rem', color: '#1A1A1A', fontWeight: '700' }}>
+                {q.answer}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
