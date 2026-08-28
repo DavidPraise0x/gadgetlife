@@ -1,64 +1,6 @@
 // Generated 48+ Gadget Products from Chigbo (@chigbo-niftech) Channel Videos
 export const gadgetsData = [
   {
-    "id": "iphone-tips-and-tricks-you-may-not-know-you-needed",
-    "name": "iPhone tips and tricks you may not know you needed.",
-    "brand": "iPhone",
-    "category": "Smartphones",
-    "score": 8.0,
-    "thumbnail": "https://img.youtube.com/vi/UvkIo6VuxrA/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/UvkIo6VuxrA",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=UvkIo6VuxrA",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for iPhone tips and tricks you may not know you needed..",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
     "id": "oraimo-spacebox-unboxing-and-test",
     "name": "Oraimo spacebox unboxing and test",
     "brand": "Oraimo",
