@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import YouTubeVideoGallery from './YouTubeVideoGallery';
 
-export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo }) {
+export default function VisualGrid({ gadgets, openGadgetDetail }) {
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [showAboutNiftech, setShowAboutNiftech] = useState(false);
@@ -143,22 +142,19 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
         </div>
       </div>
 
-      {/* 3. Official YouTube Videos Gallery */}
-      <YouTubeVideoGallery onSelectVideo={onSelectVideo} />
-
-      {/* 4. Product Cards Grid Section Header */}
+      {/* 3. Product Cards Grid Section Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
         <div>
           <h2 style={{ fontSize: '1.6rem', color: '#1A1A1A' }}>
             📱 All Vetted Gadgets ({filteredGadgets.length})
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666666' }}>
-            Click any gadget card below to open its spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
+            Click any gadget card below to open its official YouTube review, spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
           </p>
         </div>
       </div>
 
-      {/* Product Cards Grid: 2 Boxes Per Row on Mobile Phones */}
+      {/* 4. Product Cards Grid: 2 Boxes Per Row on Mobile Phones */}
       <div className="mobile-two-col-grid">
         {filteredGadgets.map(gadget => (
           <div 
@@ -195,6 +191,9 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                 <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '8px', right: '8px', fontSize: '0.72rem', padding: '2px 8px' }}>
                   ⭐ {gadget.score}
                 </span>
+                <span className="badge-neo badge-neo-coral" style={{ position: 'absolute', bottom: '8px', left: '8px', fontSize: '0.68rem', padding: '2px 8px' }}>
+                  ▶ YouTube Review
+                </span>
               </div>
 
               {/* Category & Brand Badge */}
@@ -218,7 +217,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                   🛒 Verified Stores
                 </span>
                 <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.72rem' }}>
-                  Read →
+                  Watch Review →
                 </button>
               </div>
             </div>
