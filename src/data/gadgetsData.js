@@ -1,4 +1,4 @@
-// Generated 48+ Gadget Products from Chigbo (@chigbo-niftech) Channel Videos
+// Generated 45+ Gadget Products from Chigbo (@chigbo-niftech) Channel Reviews & Unboxings
 export const gadgetsData = [
   {
     "id": "oraimo-spacebox-unboxing-and-test",
@@ -707,64 +707,6 @@ export const gadgetsData = [
     "youtubeWatchUrl": "https://www.youtube.com/watch?v=Q_Y9kQ0RSjo",
     "channelUrl": "https://www.youtube.com/@chigbo-niftech",
     "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Oraimo SpaceBuds2 Unboxing and Review.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "fund-your-tap-and-pay-transport-cards-easily-tech-digitaltransport-smartphone-digitalmobility",
-    "name": "Fund your tap and pay transport cards easily #tech #digitaltransport #smartphone #digitalmobility",
-    "brand": "Fund",
-    "category": "Smartphones",
-    "score": 9.4,
-    "thumbnail": "https://img.youtube.com/vi/Ud3Bcy2QH2I/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Ud3Bcy2QH2I",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=Ud3Bcy2QH2I",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Fund your tap and pay transport cards easily #tech #digitaltransport #smartphone #digitalmobility.",
     "quickFacts": {
       "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
       "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
@@ -1577,64 +1519,6 @@ export const gadgetsData = [
     "youtubeWatchUrl": "https://www.youtube.com/watch?v=IQP948-q1Nk",
     "channelUrl": "https://www.youtube.com/@chigbo-niftech",
     "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for Opening eye for WhatsApp \ud83e\udd23\ud83e\udd23.",
-    "quickFacts": {
-      "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
-      "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
-      "audio": "\ud83d\udd0a Tested for noise cancellation & acoustic clarity in high-noise environments.",
-      "toughness": "\ud83d\udee1\ufe0f Reinforced build quality & pavement drop durability test passed."
-    },
-    "nerdZoneSpecs": {
-      "display": "High Refresh Rate AMOLED / Calibrated Display Panel",
-      "processor": "Octa-Core High-Efficiency Processor Chipset",
-      "batteryCharging": "Fast-Charging Battery System with Surge Protection",
-      "ramStorage": "High-Speed LPDDR RAM + UFS Internal Storage",
-      "buildRating": "IP Ingress Resistance & Drop Protection Coating",
-      "cameras": "High-Resolution Sensors with Hardware Stabilization"
-    },
-    "matrixScores": {
-      "logistics": 9,
-      "setup": 9,
-      "build": 8.5,
-      "ergonomics": 8.5,
-      "performance": 9,
-      "battery": 9,
-      "software": 8.5,
-      "climate": 8.5,
-      "support": 9,
-      "value": 9
-    },
-    "trustedVendors": [
-      {
-        "name": "Slot Nigeria (Enugu Branch)",
-        "address": "No. 4 Ogui Road, Opp. Polo Park Mall, Enugu State",
-        "instagram": "@slotng",
-        "whatsapp": "+2348000000000",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "NIFTECH-SLOT",
-        "discount": "Free Accessory + 5% off"
-      },
-      {
-        "name": "Oraimo Official Store / 3C Hub (Onitsha)",
-        "address": "Main Market Plaza, Onitsha, Anambra State",
-        "instagram": "@oraimoclub",
-        "whatsapp": "+2348000000001",
-        "priceNgn": "Verified Local Price",
-        "promoCode": "CHIGBO-NIFTECH",
-        "discount": "Free Case + Instant Discount"
-      }
-    ]
-  },
-  {
-    "id": "unboxing-myself",
-    "name": "unboxing myself",
-    "brand": "unboxing",
-    "category": "Smart Tech & Accessories",
-    "score": 9.1,
-    "thumbnail": "https://img.youtube.com/vi/Ms0ZLxWIIVA/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Ms0ZLxWIIVA",
-    "youtubeWatchUrl": "https://www.youtube.com/watch?v=Ms0ZLxWIIVA",
-    "channelUrl": "https://www.youtube.com/@chigbo-niftech",
-    "verdict": "Official Chigbo field review evaluating durability, local performance, and real-world value for unboxing myself.",
     "quickFacts": {
       "visibility": "\u2600\ufe0f Bright display & clear outdoor visibility tested in Nigeria.",
       "endurance": "\ud83d\udd0b Tested for generator fast-charging speed & blackout survival.",
@@ -2732,32 +2616,32 @@ export const INITIAL_GADGETS = gadgetsData;
 
 export const INITIAL_REVIEWS = [
   {
-    gadgetId: "iphone-tips-and-tricks-you-may-not-know-you-needed",
-    vendorName: "Slot Nigeria (Enugu Branch)",
-    userName: "Emeka O.",
-    rating: 5,
-    commRating: "5/5 Fast Response",
-    deliveryRating: "5/5 Same Day Pick-up",
-    packagingRating: "5/5 Original Sealed Box",
-    comment: "Bought at Slot Enugu using Chigbo's promo code NIFTECH-SLOT. Got 5% off + free gift as promised!"
+    "gadgetId": "iphone-tips-and-tricks-you-may-not-know-you-needed",
+    "vendorName": "Slot Nigeria (Enugu Branch)",
+    "userName": "Emeka O.",
+    "rating": 5,
+    "commRating": "5/5 Fast Response",
+    "deliveryRating": "5/5 Same Day Pick-up",
+    "packagingRating": "5/5 Original Sealed Box",
+    "comment": "Bought at Slot Enugu using Chigbo's promo code NIFTECH-SLOT. Got 5% off + free gift as promised!"
   },
   {
-    gadgetId: "oraimo-spacebox-unboxing-and-test",
-    vendorName: "Oraimo Official Store (Aba)",
-    userName: "Chidinma K.",
-    rating: 5,
-    commRating: "5/5 Polite Staff",
-    deliveryRating: "5/5 Instant Pick-up",
-    packagingRating: "5/5 Authentic Hologram",
-    comment: "Awesome review! Drowns out noisy generator outside my shop."
+    "gadgetId": "oraimo-spacebox-unboxing-and-test",
+    "vendorName": "Oraimo Official Store (Aba)",
+    "userName": "Chidinma K.",
+    "rating": 5,
+    "commRating": "5/5 Polite Staff",
+    "deliveryRating": "5/5 Instant Pick-up",
+    "packagingRating": "5/5 Authentic Hologram",
+    "comment": "Awesome review! Drowns out noisy generator outside my shop."
   }
 ];
 
 export const INITIAL_VALIDATIONS = [
   {
-    gadgetId: "iphone-tips-and-tricks-you-may-not-know-you-needed",
-    userName: "Kenechukwu N. (Enugu)",
-    agreesWithReview: true,
-    comment: "100% accurate review! Bright screen under Enugu sun and fast charging works great."
+    "gadgetId": "iphone-tips-and-tricks-you-may-not-know-you-needed",
+    "userName": "Kenechukwu N. (Enugu)",
+    "agreesWithReview": true,
+    "comment": "100% accurate review! Bright screen under Enugu sun and fast charging works great."
   }
 ];
