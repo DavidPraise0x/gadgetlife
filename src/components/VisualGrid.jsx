@@ -149,7 +149,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail }) {
             📱 All Vetted Gadgets ({filteredGadgets.length})
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666666' }}>
-            Click any gadget card below to open its official YouTube review, spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
+            Click Product Details on any card below to view specs, 10-point rating matrix, and watch the official YouTube video review.
           </p>
         </div>
       </div>
@@ -191,9 +191,6 @@ export default function VisualGrid({ gadgets, openGadgetDetail }) {
                 <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '8px', right: '8px', fontSize: '0.72rem', padding: '2px 8px' }}>
                   ⭐ {gadget.score}
                 </span>
-                <span className="badge-neo badge-neo-coral" style={{ position: 'absolute', bottom: '8px', left: '8px', fontSize: '0.68rem', padding: '2px 8px' }}>
-                  ▶ YouTube Review
-                </span>
               </div>
 
               {/* Category & Brand Badge */}
@@ -217,7 +214,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail }) {
                   🛒 Verified Stores
                 </span>
                 <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.72rem' }}>
-                  Watch Review →
+                  Product Details →
                 </button>
               </div>
             </div>
