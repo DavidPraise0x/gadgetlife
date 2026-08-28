@@ -153,21 +153,17 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
             📱 All Vetted Gadgets ({filteredGadgets.length})
           </h2>
           <p style={{ fontSize: '0.88rem', color: '#666666' }}>
-            Click any gadget card below to open its GSMArena spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
+            Click any gadget card below to open its spec sheet, 10-point rating matrix, and verified vendor deals across Nigeria.
           </p>
         </div>
       </div>
 
-      {/* Product Cards Grid */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-        gap: '24px' 
-      }}>
+      {/* Product Cards Grid: 2 Boxes Per Row on Mobile Phones */}
+      <div className="mobile-two-col-grid">
         {filteredGadgets.map(gadget => (
           <div 
             key={gadget.id} 
-            className="card-neo" 
+            className="card-neo mobile-product-card" 
             style={{ 
               backgroundColor: '#FFFFFF', 
               display: 'flex', 
@@ -179,7 +175,7 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
           >
             <div>
               {/* Product Thumbnail */}
-              <div style={{ 
+              <div className="mobile-product-thumb" style={{ 
                 borderRadius: '12px', 
                 border: 'var(--border-subtle)', 
                 overflow: 'hidden', 
@@ -196,33 +192,33 @@ export default function VisualGrid({ gadgets, openGadgetDetail, onSelectVideo })
                     e.target.src = 'https://img.youtube.com/vi/vUOcha0xIpA/hqdefault.jpg';
                   }}
                 />
-                <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '0.75rem' }}>
+                <span className="badge-neo badge-neo-lime" style={{ position: 'absolute', top: '8px', right: '8px', fontSize: '0.72rem', padding: '2px 8px' }}>
                   ⭐ {gadget.score}
                 </span>
               </div>
 
               {/* Category & Brand Badge */}
-              <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
-                <span className="badge-neo badge-neo-purple" style={{ fontSize: '0.7rem' }}>{gadget.category}</span>
-                <span className="badge-neo badge-neo-yellow" style={{ fontSize: '0.7rem' }}>{gadget.brand}</span>
+              <div style={{ display: 'flex', gap: '4px', marginBottom: '6px', flexWrap: 'wrap' }}>
+                <span className="badge-neo badge-neo-purple" style={{ fontSize: '0.66rem', padding: '2px 8px' }}>{gadget.category}</span>
+                <span className="badge-neo badge-neo-yellow" style={{ fontSize: '0.66rem', padding: '2px 8px' }}>{gadget.brand}</span>
               </div>
 
               {/* Title & Verdict */}
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: '#1A1A1A', lineHeight: 1.3 }}>
+              <h3 className="mobile-product-title" style={{ fontSize: '1.15rem', marginBottom: '6px', color: '#1A1A1A', lineHeight: 1.3 }}>
                 {gadget.name}
               </h3>
-              <p style={{ fontSize: '0.84rem', color: '#555555', lineHeight: 1.4, marginBottom: '14px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+              <p className="mobile-product-verdict" style={{ fontSize: '0.84rem', color: '#555555', lineHeight: 1.4, marginBottom: '12px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 "{gadget.verdict}"
               </p>
             </div>
 
             <div>
-              <div style={{ borderTop: 'var(--border-subtle)', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.78rem', color: 'var(--accent-green)', fontWeight: '700' }}>
-                  🛒 Verified Stores Nationwide
+              <div className="mobile-card-footer" style={{ borderTop: 'var(--border-subtle)', paddingTop: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '0.74rem', color: 'var(--accent-green)', fontWeight: '700' }}>
+                  🛒 Verified Stores
                 </span>
-                <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.75rem' }}>
-                  Read Review →
+                <button className="btn-neo btn-neo-outline" style={{ padding: '4px 10px', fontSize: '0.72rem' }}>
+                  Read →
                 </button>
               </div>
             </div>

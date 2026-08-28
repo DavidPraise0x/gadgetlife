@@ -216,10 +216,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: width 0.4s ease;
 }
 
-.grid-gadgets {
+/* 2-Column Mobile Product Cards Grid ("Two Boxes per Row") */
+.mobile-two-col-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 /* ==========================================
@@ -236,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .card-neo:hover {
-    transform: none !important; /* Avoid hover shift jumps on mobile touch */
+    transform: none !important;
   }
 
   h1 {
@@ -259,7 +260,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .btn-neo {
-    min-height: 44px; /* Touch friendly height */
+    min-height: 44px;
+  }
+
+  /* 2 Boxes per Row Grid on Mobile */
+  .mobile-two-col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .mobile-product-card {
+    padding: 12px !important;
+  }
+
+  .mobile-product-thumb {
+    height: 125px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .mobile-product-title {
+    font-size: 0.92rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .mobile-product-verdict {
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+    -webkit-line-clamp: 2 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .mobile-card-footer {
+    flex-direction: column !important;
+    gap: 6px !important;
+    align-items: flex-start !important;
   }
 
   /* Responsive Spec Grid for NerdZone */
@@ -278,13 +313,9 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2px !important;
     padding: 10px 0 !important;
   }
-
-  .grid-gadgets {
-    grid-template-columns: 1fr !important;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
   .card-neo {
     padding: 14px !important;
   }
@@ -294,12 +325,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .badge-neo {
-    font-size: 0.7rem !important;
-    padding: 3px 10px !important;
+    font-size: 0.68rem !important;
+    padding: 3px 8px !important;
   }
 
   .btn-neo {
-    padding: 8px 14px !important;
-    font-size: 0.82rem !important;
+    padding: 8px 12px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .mobile-two-col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .mobile-product-card {
+    padding: 10px !important;
+  }
+
+  .mobile-product-thumb {
+    height: 110px !important;
   }
 }
