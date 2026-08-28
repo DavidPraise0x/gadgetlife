@@ -230,14 +230,14 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
   const sections = getCategorySpecSections();
 
   return (
-    <div className="card-neo" style={{ backgroundColor: '#FFFFFF', border: 'var(--border-subtle)', marginBottom: '32px', padding: '28px' }}>
+    <div className="card-neo" style={{ backgroundColor: '#FFFFFF', border: 'var(--border-subtle)', marginBottom: '32px' }}>
       
       {/* Header Bar */}
       <div style={{ marginBottom: '20px', borderBottom: 'var(--border-subtle)', paddingBottom: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
           <span style={{ fontSize: '1.8rem' }}>📱</span>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
               <h3 style={{ fontSize: '1.4rem', color: '#1A1A1A', fontFamily: 'var(--font-heading)' }}>
                 Nerd Zone // {gadgetTitle} Specifications
               </h3>
@@ -250,13 +250,13 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
         </div>
       </div>
 
-      {/* Clean Structured Hardware Specification Table */}
+      {/* Mobile Responsive Structured Hardware Specification Table */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: '#E2DDD5', borderRadius: '12px', overflow: 'hidden', border: 'var(--border-subtle)' }}>
         {sections.map((sec, secIdx) => (
-          <div key={secIdx} style={{ display: 'grid', gridTemplateColumns: '170px 1fr', backgroundColor: '#FFFFFF' }}>
+          <div key={secIdx} className="gsm-spec-row" style={{ display: 'grid', gridTemplateColumns: '170px 1fr', backgroundColor: '#FFFFFF' }}>
             
             {/* Category Column */}
-            <div style={{ 
+            <div className="gsm-category-col" style={{ 
               backgroundColor: '#FAF7F2', 
               padding: '16px', 
               fontWeight: '900', 
@@ -272,9 +272,9 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
             </div>
 
             {/* Items Column */}
-            <div style={{ padding: '0 16px' }}>
+            <div style={{ padding: '0 14px' }}>
               {sec.items.map((item, itemIdx) => (
-                <div key={itemIdx} style={{ 
+                <div key={itemIdx} className="gsm-item-row" style={{ 
                   display: 'grid', 
                   gridTemplateColumns: '150px 1fr', 
                   padding: '12px 0', 
@@ -285,7 +285,7 @@ export default function NerdZone({ specs = {}, gadget = {} }) {
                   <span style={{ fontWeight: '700', color: '#666666', fontSize: '0.85rem' }}>
                     {item.label}
                   </span>
-                  <span style={{ color: '#1A1A1A', fontWeight: '500', lineHeight: 1.5 }}>
+                  <span style={{ color: '#1A1A1A', fontWeight: '500', lineHeight: 1.5, wordBreak: 'break-word' }}>
                     {item.value}
                   </span>
                 </div>

@@ -42,6 +42,7 @@ body {
   font-size: 15.5px;
   line-height: 1.6;
   min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
-/* Warm Minimalist Editorial Card (Ajanwachuku Style) */
+/* Warm Minimalist Editorial Card */
 .card-neo {
   background-color: var(--bg-card);
   border: var(--border-subtle);
@@ -87,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s ease;
   user-select: none;
   text-decoration: none;
+  touch-action: manipulation;
 }
 .btn-neo:hover {
   transform: translateY(-2px);
@@ -130,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #C5BFB5;
 }
 
-/* Minimalist Pill Badges (Ajanwachuku Style) */
+/* Minimalist Pill Badges */
 .badge-neo {
   display: inline-flex;
   align-items: center;
@@ -183,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 20px;
+  padding: 16px;
 }
 .modal-content {
   background-color: var(--bg-card);
@@ -218,4 +220,86 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 26px;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE OVERRIDES (Smartphones & Tablets)
+   ========================================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14.5px;
+  }
+
+  .card-neo {
+    padding: 18px !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .card-neo:hover {
+    transform: none !important; /* Avoid hover shift jumps on mobile touch */
+  }
+
+  h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h2 {
+    font-size: 1.35rem !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .modal-content {
+    padding: 20px !important;
+    max-width: 96vw !important;
+    border-radius: 18px !important;
+  }
+
+  .btn-neo {
+    min-height: 44px; /* Touch friendly height */
+  }
+
+  /* Responsive Spec Grid for NerdZone */
+  .gsm-spec-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gsm-category-col {
+    border-right: none !important;
+    border-bottom: 1px solid #E2DDD5 !important;
+    padding: 10px 14px !important;
+  }
+
+  .gsm-item-row {
+    grid-template-columns: 1fr !important;
+    gap: 2px !important;
+    padding: 10px 0 !important;
+  }
+
+  .grid-gadgets {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-neo {
+    padding: 14px !important;
+  }
+
+  h1 {
+    font-size: 1.45rem !important;
+  }
+
+  .badge-neo {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
+
+  .btn-neo {
+    padding: 8px 14px !important;
+    font-size: 0.82rem !important;
+  }
 }
